@@ -1,0 +1,153 @@
+# WHOIS Lookup
+
+## What is WHOIS?
+
+WHOIS is a protocol used to get information about a domain name or IP address.
+
+It helps identify:
+
+* Domain owner
+* Registrar
+* Registration date
+* Expiry date
+* Name servers
+* Contact information (sometimes hidden)
+
+---
+
+# Why WHOIS is Useful in Cybersecurity
+
+WHOIS is used during:
+
+* Reconnaissance
+* Bug bounty hunting
+* OSINT investigations
+* Domain analysis
+* Threat intelligence
+
+Security researchers use it to gather public information about targets.
+
+---
+
+# Install WHOIS
+
+## Linux
+
+```bash
+sudo apt install whois
+```
+
+## macOS
+
+```bash
+brew install whois
+```
+
+---
+
+# Basic WHOIS Lookup
+
+```bash
+whois google.com
+```
+
+This returns domain information about Google.
+
+---
+
+# Example Output
+
+```text
+Domain Name: GOOGLE.COM
+Registrar: MarkMonitor Inc.
+Creation Date: 1997-09-15
+Expiry Date: 2028-09-14
+Name Server: NS1.GOOGLE.COM
+```
+
+---
+
+# Useful WHOIS Commands
+
+## Lookup a Domain
+
+```bash
+whois example.com
+```
+
+## Lookup an IP Address
+
+```bash
+whois 8.8.8.8
+```
+
+## Save Output to File
+
+```bash
+whois example.com > result.txt
+```
+
+---
+
+# Important Fields
+
+| Field         | Meaning                     |
+| ------------- | --------------------------- |
+| Registrar     | Company managing the domain |
+| Creation Date | When domain was registered  |
+| Expiry Date   | Domain expiration           |
+| Name Servers  | DNS servers used            |
+| Org Name      | Organization owning domain  |
+
+---
+
+# Cybersecurity Use Cases
+
+## 1. Domain Investigation
+
+Check suspicious domains.
+
+```bash
+whois suspicious-site.com
+```
+
+---
+
+## 2. Identify Hosting Provider
+
+WHOIS on IP addresses may reveal hosting providers.
+
+```bash
+whois 1.1.1.1
+```
+
+---
+
+## 3. Detect Recently Registered Domains
+
+New domains are often used in phishing attacks.
+
+Look at:
+
+```text
+Creation Date
+```
+
+---
+
+# Limitations
+
+* Many domains use privacy protection
+* Some information may be hidden
+* Not always accurate
+
+---
+
+# Related Tools
+
+* Nmap
+* Dig
+* Nslookup
+* Amass
+
+---
