@@ -1,0 +1,16 @@
+import socket
+
+domain = input("Enter domain: ")
+
+try:
+    ip = socket.gethostbyname(domain)
+
+    print(f"\n[+] Domain: {domain}")
+    print(f"[+] IP Address: {ip}")
+
+    hostname = socket.gethostbyaddr(ip)
+
+    print(f"[+] Hostname: {hostname[0]}")
+
+except socket.gaierror:
+    print("[-] Invalid domain")
