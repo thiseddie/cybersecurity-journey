@@ -1,4 +1,4 @@
-# Cisco Packet Tracer Basic LAN Lab
+# Cisco Packet Tracer LAN Lab
 
 This project demonstrates a simple LAN setup using Cisco Packet Tracer.
 
