@@ -1,0 +1,69 @@
+# Cisco Packet Tracer Basic LAN Lab
+
+```text
+PC0 -------- Switch0 -------- PC1
+```
+
+## Devices Used
+
+* 1 × PC0
+* 1 × Switch0 (Cisco 2960)
+* 1 × PC1
+* Copper Straight-Through Cables
+
+---
+
+# IP Configuration
+
+| Device | IP Address   | Subnet Mask   |
+| ------ | ------------ | ------------- |
+| PC0    | 192.168.1.10 | 255.255.255.0 |
+| PC1    | 192.168.1.20 | 255.255.255.0 |
+
+---
+
+# Connections
+
+| Device | Port          | Connected To            |
+| ------ | ------------- | ----------------------- |
+| PC0    | FastEthernet0 | Switch0 FastEthernet0/1 |
+| PC1    | FastEthernet0 | Switch0 FastEthernet0/2 |
+
+---
+
+# Connectivity Test
+
+Open Command Prompt on PC0:
+
+```bash
+ping 192.168.1.20
+```
+
+Expected Result:
+
+```text
+Reply from 192.168.1.20
+```
+
+---
+---
+
+# Learning Outcomes
+
+* Basic LAN setup
+* Switch connectivity
+* IP addressing
+* Ping testing
+* Cisco Packet Tracer basics
+
+---
+
+# Software Used
+
+* Cisco Packet Tracer
+
+---
+
+# Author
+
+Harsh Singh
