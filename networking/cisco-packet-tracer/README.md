@@ -1,0 +1,25 @@
+# Cisco Packet Tracer Basic LAN Lab
+
+This project demonstrates a simple LAN setup using Cisco Packet Tracer.
+
+## Features
+- Basic switch configuration
+- PC-to-PC communication
+- IP addressing
+- Connectivity testing
+
+## Software Used
+- Cisco 
+- Basic switch configuration
+- PC-to-PC communication
+- IP addressing
+- Connectivity testing
+
+## Software Used
+- Cisco Packet Tracer
+
+## Author
+Harsh SinghPacket Tracer
+
+## Author
+Harsh Singh
