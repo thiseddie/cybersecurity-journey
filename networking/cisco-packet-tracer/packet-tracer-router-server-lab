@@ -1,0 +1,104 @@
+# Cisco Packet Tracer Router to Server Lab
+
+```text
+PC1 -------- Switch0 -------- Router0 -------- Server0
+```
+
+## Devices Used
+
+* 1 × PC1
+* 1 × Switch0 (Cisco 2960)
+* 1 × Router0
+* 1 × Server0
+* Copper Straight-Through Cables
+
+---
+
+# IP Configuration
+
+| Device  | Interface      | IP Address   | Subnet Mask   |
+| --------|---------------|-------------|--------------|
+| PC1     | FastEthernet0 | 192.168.1.10 | 255.255.255.0 |
+| Router0 | GigabitEthernet0/0 | 192.168.1.1 | 255.255.255.0 |
+| Router0 | GigabitEthernet0/1 | 10.0.0.1 | 255.255.255.0 |
+| Server0 | FastEthernet0 | 10.0.0.10 | 255.255.255.0 |
+
+---
+
+# Default Gateway
+
+| Device | Gateway |
+|---------|---------|
+| PC1 | 192.168.1.1 |
+| Server0 | 10.0.0.1 |
+
+---
+
+# Connections
+
+| Device | Port | Connected To |
+|---------|---------|---------|
+| PC1 | FastEthernet0 | Switch0 FastEthernet0/1 |
+| Switch0 | FastEthernet0/24 | Router0 GigabitEthernet0/0 |
+| Router0 | GigabitEthernet0/1 | Server0 FastEthernet0 |
+
+---
+
+# Router Configuration
+
+```bash
+enable
+configure terminal
+
+interface g0/0
+ip address 192.168.1.1 255.255.255.0
+no shutdown
+
+interface g0/1
+ip address 10.0.0.1 255.255.255.0
+no shutdown
+
+end
+write memory
+```
+
+---
+
+# Connectivity Test
+
+Open Command Prompt on PC1:
+
+```bash
+ping 192.168.1.1
+ping 10.0.0.10
+```
+
+Expected Result:
+
+```text
+Reply from 192.168.1.1
+Reply from 10.0.0.10
+```
+
+---
+
+# Learning Outcomes
+
+* Router interface configuration
+* IP addressing
+* Default gateway configuration
+* Communication between different networks
+* Basic routing concepts
+* Ping testing and troubleshooting
+
+---
+
+# Software Used
+
+* Cisco Packet Tracer
+
+---
+
+# Author
+
+Harsh Singh
