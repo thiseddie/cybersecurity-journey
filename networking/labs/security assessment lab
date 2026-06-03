@@ -1,0 +1,58 @@
+## Objective
+Perform authorized security testing to identify potential security weaknesses and improve security posture.
+
+## Methodology
+
+### 1. Reconnaissance
+Purpose:
+- Identify publicly exposed assets.
+- Understand the target's attack surface.
+
+Tools:
+- Nmap
+- DNS lookup utilities
+- HTTP fingerprinting tools
+
+Why:
+Reconnaissance helps security professionals understand which services are exposed and may require further review.
+
+### 2. Service Enumeration
+Purpose:
+- Determine versions of running services.
+- Identify potentially outdated software.
+
+Tools:
+- Nmap Service Detection
+- Web Technology Fingerprinting
+
+Why:
+Outdated services may contain known security issues.
+
+### 3. Vulnerability Assessment
+Purpose:
+- Compare identified software against known vulnerabilities.
+- Detect common security misconfigurations.
+
+Tools:
+- Nuclei
+- OWASP ZAP
+- Burp Suite
+
+Why:
+Automated assessment helps identify weaknesses efficiently.
+
+### 4. Validation
+Purpose:
+- Confirm findings.
+- Eliminate false positives.
+
+Why:
+Accurate reporting reduces unnecessary remediation effort.
+
+### 5. Reporting
+Purpose:
+- Document findings.
+- Provide remediation guidance.
+
+Why:
+The goal of security testing is to improve security, not merely identify issues.
