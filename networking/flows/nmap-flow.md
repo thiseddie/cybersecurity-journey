@@ -122,7 +122,7 @@ Without DNS, you would need to remember IPs instead of domain names
 ## 🧠 Insight
 
 HTTPS = HTTP + Security
-
+HTTPS is the more secure form of HTTP
 
 # 🔄 TCP Connection Flow
 
