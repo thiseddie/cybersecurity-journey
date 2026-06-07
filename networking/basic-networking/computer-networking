@@ -1,0 +1,482 @@
+# 🌐 Computer Networking Mastery
+
+A comprehensive networking repository covering concepts from beginner to advanced level.
+
+---
+
+# 1. What is a Computer Network?
+
+A computer network is a collection of interconnected devices that communicate and share resources using communication protocols.
+
+Examples:
+
+- Internet
+- College Network
+- Company Network
+- Home Wi-Fi Network
+
+---
+
+# 2. Types of Networks
+
+## PAN (Personal Area Network)
+
+Range: Few meters
+
+Examples:
+- Bluetooth
+- Smart Watches
+
+## LAN (Local Area Network)
+
+Range: Building
+
+Examples:
+- School Lab
+- Office Network
+
+## MAN (Metropolitan Area Network)
+
+Range: City
+
+Examples:
+- City ISP
+
+## WAN (Wide Area Network)
+
+Range: Country/Global
+
+Example:
+- Internet
+
+---
+
+# 3. Network Topologies
+
+## Bus Topology
+
+Single communication cable.
+
+Advantages:
+- Cheap
+
+Disadvantages:
+- Single point of failure
+
+## Star Topology
+
+All devices connect to a central switch.
+
+Advantages:
+- Easy management
+
+## Ring Topology
+
+Devices form a circular connection.
+
+## Mesh Topology
+
+Every device connected to every other device.
+
+Used in:
+- Military Networks
+
+---
+
+# 4. OSI Model
+
+| Layer | Name |
+|---------|---------|
+| 7 | Application |
+| 6 | Presentation |
+| 5 | Session |
+| 4 | Transport |
+| 3 | Network |
+| 2 | Data Link |
+| 1 | Physical |
+
+### Physical Layer
+
+Responsible for:
+- Cables
+- Signals
+- Connectors
+
+### Data Link Layer
+
+Responsible for:
+- MAC Addressing
+- Switching
+
+### Network Layer
+
+Responsible for:
+- Routing
+- IP Addressing
+
+### Transport Layer
+
+Responsible for:
+- TCP
+- UDP
+
+### Session Layer
+
+Responsible for:
+- Session Management
+
+### Presentation Layer
+
+Responsible for:
+- Encryption
+- Compression
+
+### Application Layer
+
+Responsible for:
+- HTTP
+- FTP
+- SMTP
+
+---
+
+# 5. TCP/IP Model
+
+| Layer | Protocol |
+|---------|---------|
+| Application | HTTP, DNS |
+| Transport | TCP, UDP |
+| Internet | IP |
+| Network Access | Ethernet |
+
+---
+
+# 6. Network Devices
+
+## Hub
+
+Broadcasts data to all devices.
+
+## Switch
+
+Sends data to intended destination only.
+
+## Router
+
+Connects multiple networks.
+
+## Firewall
+
+Filters network traffic.
+
+## Access Point
+
+Provides Wi-Fi connectivity.
+
+---
+
+# 7. IP Addressing
+
+IPv4 Example:
+
+192.168.1.1
+
+IPv6 Example:
+
+2001:db8::1
+
+Classes:
+
+- Class A
+- Class B
+- Class C
+- Class D
+- Class E
+
+---
+
+# 8. Subnetting
+
+Purpose:
+- Efficient IP utilization
+- Reduce broadcast traffic
+
+Example:
+
+192.168.1.0/24
+
+Subnet Mask:
+
+255.255.255.0
+
+---
+
+# 9. MAC Address
+
+Media Access Control Address
+
+Example:
+
+00:1A:2B:3C:4D:5E
+
+Unique identifier of NIC.
+
+---
+
+# 10. ARP
+
+Address Resolution Protocol
+
+Function:
+
+IP Address → MAC Address
+
+---
+
+# 11. Ethernet
+
+Most widely used LAN technology.
+
+Standards:
+
+- Fast Ethernet
+- Gigabit Ethernet
+- 10 Gigabit Ethernet
+
+---
+
+# 12. VLAN
+
+Virtual Local Area Network
+
+Benefits:
+- Security
+- Traffic Isolation
+
+Example:
+
+VLAN 10 → HR
+
+VLAN 20 → IT
+
+---
+
+# 13. STP
+
+Spanning Tree Protocol
+
+Purpose:
+- Prevent Layer 2 loops
+
+---
+
+# 14. Routing
+
+Process of forwarding packets between networks.
+
+Types:
+
+- Static Routing
+- Dynamic Routing
+
+---
+
+# 15. OSPF
+
+Open Shortest Path First
+
+Features:
+- Link State Protocol
+- Fast Convergence
+
+---
+
+# 16. EIGRP
+
+Enhanced Interior Gateway Routing Protocol
+
+Features:
+- Cisco Proprietary
+- DUAL Algorithm
+
+---
+
+# 17. BGP
+
+Border Gateway Protocol
+
+Used by:
+- ISPs
+- Internet Backbone
+
+---
+
+# 18. NAT
+
+Network Address Translation
+
+Converts:
+- Private IP
+- Public IP
+
+---
+
+# 19. DHCP
+
+Dynamic Host Configuration Protocol
+
+Provides:
+- IP Address
+- Gateway
+- DNS
+
+Automatically
+
+---
+
+# 20. DNS
+
+Domain Name System
+
+Example:
+
+google.com → IP Address
+
+---
+
+# 21. TCP
+
+Transmission Control Protocol
+
+Features:
+- Reliable
+- Connection-Oriented
+
+Three Way Handshake:
+
+SYN → SYN ACK → ACK
+
+---
+
+# 22. UDP
+
+Features:
+- Fast
+- Connectionless
+
+Used In:
+- Gaming
+- Streaming
+
+---
+
+# 23. HTTP & HTTPS
+
+HTTP:
+- Unsecured
+
+HTTPS:
+- SSL/TLS Encryption
+
+Port:
+- HTTP 80
+- HTTPS 443
+
+---
+
+# 24. SSH
+
+Secure remote access protocol.
+
+Port 22
+
+---
+
+# 25. VPN
+
+Virtual Private Network
+
+Benefits:
+- Encryption
+- Privacy
+- Remote Access
+
+---
+
+# 26. Firewalls
+
+Types:
+
+- Packet Filtering
+- Stateful Firewall
+- Next Generation Firewall
+
+---
+
+# 27. IDS & IPS
+
+IDS:
+- Detection
+
+IPS:
+- Detection + Prevention
+
+---
+
+# 28. Cloud Networking
+
+Platforms:
+
+- AWS
+- Azure
+- GCP
+
+Concepts:
+
+- VPC
+- Security Groups
+- Load Balancers
+
+---
+
+# 29. SDN
+
+Software Defined Networking
+
+Separates:
+- Control Plane
+- Data Plane
+
+---
+
+# 30. Network Automation
+
+Tools:
+
+- Python
+- Ansible
+- Netmiko
+- NAPALM
+
+---
+
+# 31. Data Center Networking
+
+Technologies:
+
+- Spine Leaf Architecture
+- VXLAN
+- EVPN
+
+---
+
+# 32. Troubleshooting Commands
+
+## Windows
+
+```cmd
+ipconfig
+ping
+tracert
+nslookup
+netstat
