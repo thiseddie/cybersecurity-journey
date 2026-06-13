@@ -1,0 +1,279 @@
+Introduction
+A computer network is a collection of interconnected devices that communicate and share resources such as data, hardware, software, and internet connections.
+Networks are classified based on:
+Geographical coverage
+Ownership
+Architecture
+Communication method
+Transmission medium
+Table of Contents
+PAN (Personal Area Network)
+LAN (Local Area Network)
+WLAN (Wireless Local Area Network)
+CAN (Campus Area Network)
+MAN (Metropolitan Area Network)
+WAN (Wide Area Network)
+GAN (Global Area Network)
+SAN (Storage Area Network)
+VPN (Virtual Private Network)
+Intranet
+Extranet
+Internet
+Client-Server Network
+Peer-to-Peer Network
+Network Comparison Table
+1. PAN (Personal Area Network)
+Definition
+A PAN is the smallest type of network used for communication between devices within an individual's workspace.
+Range
+Typically 1–10 meters.
+Technologies Used
+Bluetooth
+Infrared
+USB
+ZigBee
+Examples
+Smartphone connected to earbuds
+Smartwatch connected to phone
+Laptop connected to wireless mouse
+Advantages
+Easy setup
+Low cost
+Portable
+Disadvantages
+Limited range
+Lower data speed
+Diagram
+Phone
+ / \
+Watch Earbuds
+2. LAN (Local Area Network)
+Definition
+A network that covers a small geographical area such as a room, office, building, or home.
+Range
+Up to several hundred meters.
+Technologies
+Ethernet
+Wi-Fi
+Fiber Optics
+Components
+Switch
+Router
+Access Point
+Ethernet Cables
+Examples
+School computer lab
+Office network
+Home Wi-Fi
+Advantages
+High speed
+Resource sharing
+Better security
+Disadvantages
+Limited area
+Maintenance cost
+Diagram
+      Router
+        |
+     Switch
+   /   |   \
+PC1  PC2  Printer
+3. WLAN (Wireless Local Area Network)
+Definition
+A LAN that uses wireless communication instead of physical cables.
+Technologies
+Wi-Fi (IEEE 802.11)
+Frequency Bands
+2.4 GHz
+Pros:
+Longer range
+Cons:
+More interference
+5 GHz
+Pros:
+Faster speed
+Cons:
+Shorter range
+6 GHz (Wi-Fi 6E)
+Pros:
+Less congestion
+Higher speed
+Examples
+Home Wi-Fi
+Airport Wi-Fi
+College Wi-Fi
+4. CAN (Campus Area Network)
+Definition
+Connects multiple LANs within a campus or institution.
+Coverage
+1–5 km
+Examples
+University campus
+Research centers
+Corporate campuses
+Components
+Fiber optic backbone
+Core switches
+Routers
+Advantages
+Centralized management
+High-speed communication
+5. MAN (Metropolitan Area Network)
+Definition
+A network spanning an entire city or metropolitan area.
+Coverage
+5–50 km
+Technologies
+Fiber Optics
+Microwave Links
+Examples
+City-wide government network
+Cable TV network
+Advantages
+Connects multiple LANs
+Disadvantages
+Expensive infrastructure
+6. WAN (Wide Area Network)
+Definition
+A network covering large geographical areas such as states, countries, or continents.
+Coverage
+100 km to thousands of kilometers.
+Technologies
+Leased lines
+MPLS
+Satellite
+Fiber Optics
+Examples
+Banking network
+Railway network
+Corporate multinational network
+Advantages
+Global communication
+Disadvantages
+Higher latency
+Expensive management
+Diagram
+City A ---- City B ---- City C
+7. GAN (Global Area Network)
+Definition
+A network connecting devices worldwide.
+Best Example
+The Internet.
+Technologies
+Satellite communication
+Undersea fiber optic cables
+Characteristics
+Global reach
+Massive scalability
+8. SAN (Storage Area Network)
+Definition
+A dedicated high-speed network connecting servers to storage devices.
+Purpose
+Provides centralized storage access.
+Components
+Storage Arrays
+SAN Switches
+Servers
+Protocols
+Fibre Channel
+iSCSI
+Advantages
+High performance
+Data backup
+Disaster recovery
+Example
+Data centers.
+9. VPN (Virtual Private Network)
+Definition
+A secure tunnel over a public network.
+Working
+User
+ |
+Encrypted Tunnel
+ |
+VPN Server
+ |
+Internet
+Types
+Remote Access VPN
+Connects individual users.
+Site-to-Site VPN
+Connects entire networks.
+Protocols
+OpenVPN
+IPSec
+WireGuard
+Advantages
+Privacy
+Security
+Remote work support
+10. Intranet
+Definition
+A private network accessible only within an organization.
+Features
+Internal communication
+Employee portals
+Internal documents
+Examples
+Company HR Portal
+College ERP
+11. Extranet
+Definition
+An extension of an intranet allowing controlled external access.
+Users
+Vendors
+Suppliers
+Partners
+Example
+Manufacturer sharing inventory data with suppliers.
+12. Internet
+Definition
+The world's largest network of interconnected networks.
+Features
+Global connectivity
+Information sharing
+Cloud computing
+Services
+Web Browsing
+Email
+Video Streaming
+Social Media
+Online Banking
+13. Client-Server Network
+Definition
+A centralized architecture where clients request services from a server.
+Structure
+Clients
+   |
+ Server
+Examples
+Gmail
+Facebook
+Banking Systems
+Advantages
+Centralized control
+Better security
+Disadvantages
+Server failure affects clients
+14. Peer-to-Peer (P2P) Network
+Definition
+A decentralized network where all devices can act as both client and server.
+Examples
+Torrent systems
+Local file sharing
+Advantages
+Low cost
+No central server
+Disadvantages
+Security concerns
+Difficult management
+Network Comparison Table
+Type	Coverage	   Speed	        Cost	  Example
+PAN	  1–10 m	     Low	          Low	    Bluetooth
+LAN 	Building	   High   	      Medium	Office Network
+WLAN	Building	   High   	      Medium	Wi-Fi
+CAN   Campus	     High   	      Medium	University
+MAN	  City	       Medium-High	  High	  City Network
+WAN 	Country  	   Medium	Very    High	  Banking Network
+GAN 	Global	     Variable	Very  High	  Internet
+SAN 	Data Center  Very High	    High	  Storage Systems
