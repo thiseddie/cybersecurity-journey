@@ -268,12 +268,12 @@ Disadvantages
 Security concerns
 Difficult management
 Network Comparison Table
-Type	Coverage	   Speed	        Cost	  Example
-PAN	  1–10 m	     Low	          Low	    Bluetooth
-LAN 	Building	   High   	      Medium	Office Network
-WLAN	Building	   High   	      Medium	Wi-Fi
-CAN   Campus	     High   	      Medium	University
-MAN	  City	       Medium-High	  High	  City Network
-WAN 	Country  	   Medium	Very    High	  Banking Network
-GAN 	Global	     Variable	Very  High	  Internet
-SAN 	Data Center  Very High	    High	  Storage Systems
+Type	 Coverage	    Speed	         Cost	   Example
+PAN	  1–10 m	      Low	           Low	    Bluetooth
+LAN 	 Building	    High   	       Medium	 Office Network
+WLAN	 Building	    High   	       Medium	 Wi-Fi
+CAN   Campus	      High   	       Medium	 University
+MAN	  City	        Medium-High	   High	   City Network
+WAN 	 Country  	   Medium	Very    High	   Banking Network
+GAN 	 Global	      Variable	Very  High	   Internet
+SAN 	 Data Center  Very High	     High	   Storage Systems
