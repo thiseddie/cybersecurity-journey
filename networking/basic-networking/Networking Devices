@@ -19,3 +19,64 @@ Gateway
 A gateway acts as an entry and exit point between different networks that may use different communication protocols.
 Firewall
 A firewall monitors and controls incoming and outgoing network traffic based on predefined security rules, helping protect networks from unauthorized access.
+
+
+>>>>>>>>>>>>>>>HUB>>>>>>>>>>>>>>>>>>>>
+
+## Hub
+
+A **Hub** is a basic networking device used to connect multiple computers or devices in a network. It operates at the **Physical Layer (Layer 1)** of the **OSI Model**.
+
+### How a Hub Works
+
+When a hub receives data from one device, it **broadcasts** that data to **all connected devices**, regardless of the intended destination. Each device checks whether the data is meant for it and ignores it if it is not.
+
+### Example
+
+Suppose four computers (A, B, C, and D) are connected to a hub.
+
+* If A sends data to C,
+* The hub forwards the data to B, C, and D as well.
+* Only C accepts the data; the others discard it.
+
+### Features
+
+* Simple and inexpensive device.
+* Does not store MAC addresses.
+* Broadcasts data to all ports.
+* No traffic management or filtering.
+* All connected devices share the same bandwidth.
+
+### Advantages
+
+✔ Easy to install and use.
+✔ Low cost.
+✔ Useful for small or temporary networks.
+
+### Disadvantages
+
+✖ Generates unnecessary network traffic.
+✖ Less secure because all devices receive the data.
+✖ Slower performance compared to switches.
+✖ Cannot reduce network collisions.
+
+### Types of Hubs
+
+1. **Passive Hub** – Simply forwards signals without amplification.
+2. **Active Hub** – Amplifies signals before forwarding them.
+3. **Intelligent Hub** – Provides basic network monitoring and management features.
+
+### Hub vs Switch
+
+| Feature           | Hub                       | Switch                    |
+| ----------------- | ------------------------- | ------------------------- |
+| OSI Layer         | Layer 1                   | Layer 2                   |
+| Data Forwarding   | Broadcasts to all devices | Sends only to destination |
+| MAC Address Table | No                        | Yes                       |
+| Speed             | Slower                    | Faster                    |
+| Security          | Lower                     | Higher                    |
+
+### Real-World Status
+
+Hubs are largely obsolete today and have been replaced by **switches** because switches provide better speed, efficiency, and security. However, understanding hubs is important for learning networking fundamentals.
+
