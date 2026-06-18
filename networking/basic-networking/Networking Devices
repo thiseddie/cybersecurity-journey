@@ -1,0 +1,21 @@
+Networking Devices
+This repository contains notes and explanations of common networking devices used in computer networks. These devices help connect computers, manage data traffic, and enable communication between different networks.
+Devices Covered
+Hub
+A hub is a basic networking device that connects multiple computers in a network. It broadcasts incoming data to all connected devices without checking the destination.
+Switch
+A switch connects devices within a Local Area Network (LAN). It forwards data only to the intended device using MAC addresses, making communication faster and more efficient.
+Router
+A router connects different networks and directs data packets between them using IP addresses. It is commonly used to connect a home or office network to the Internet.
+Modem
+A modem converts digital data from a computer into signals that can travel over communication lines and vice versa. It acts as a bridge between an ISP and a local network.
+Access Point (AP)
+An access point provides wireless connectivity to devices, allowing them to join a wired network through Wi-Fi.
+Bridge
+A bridge connects and filters traffic between two network segments, reducing unnecessary data transmission.
+Repeater
+A repeater receives weak network signals, amplifies them, and retransmits them to extend network coverage.
+Gateway
+A gateway acts as an entry and exit point between different networks that may use different communication protocols.
+Firewall
+A firewall monitors and controls incoming and outgoing network traffic based on predefined security rules, helping protect networks from unauthorized access.
