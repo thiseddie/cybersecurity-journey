@@ -80,3 +80,65 @@ Suppose four computers (A, B, C, and D) are connected to a hub.
 
 Hubs are largely obsolete today and have been replaced by **switches** because switches provide better speed, efficiency, and security. However, understanding hubs is important for learning networking fundamentals.
 
+
+
+>>>>>>>>>>>>>>>>Switch>>>>>>>>>>>>>>>
+
+
+## Switch
+
+A **Switch** is a networking device that connects multiple devices (computers, printers, servers, etc.) within a **Local Area Network (LAN)**. It operates mainly at the **Data Link Layer (Layer 2)** of the **OSI Model**.
+
+### How a Switch Works
+
+A switch learns and stores the **MAC addresses** of connected devices in a MAC address table.
+
+When a device sends data:
+
+1. The switch checks the destination MAC address.
+2. It looks up the address in its table.
+3. It forwards the data only to the correct port instead of broadcasting it to all devices.
+
+### Example
+
+Suppose PCs A, B, C, and D are connected to a switch.
+
+* If A sends data to C,
+* The switch forwards the data only to C's port.
+* B and D do not receive the data.
+
+### Features
+
+* Uses MAC addresses to forward data.
+* Reduces unnecessary network traffic.
+* Each port has dedicated bandwidth.
+* Supports full-duplex communication (send and receive simultaneously).
+* Improves network performance and security.
+
+### Advantages
+
+✔ Faster than a hub.
+✔ Reduces network collisions.
+✔ More secure because data is sent only to the intended device.
+✔ Efficient use of bandwidth.
+
+### Disadvantages
+
+✖ More expensive than a hub.
+✖ Requires more configuration in larger networks.
+
+### Types of Switches
+
+1. **Unmanaged Switch** – Plug-and-play, no configuration required.
+2. **Managed Switch** – Allows configuration, monitoring, and advanced features such as VLANs.
+3. **PoE (Power over Ethernet) Switch** – Provides both data and power through Ethernet cables.
+
+### Hub vs Switch
+
+* **Hub:** Sends data to all devices.
+* **Switch:** Sends data only to the intended device.
+
+### Real-World Use
+
+Switches are commonly used in homes, offices, schools, data centers, and enterprise networks to efficiently connect devices and improve network performance.
+
