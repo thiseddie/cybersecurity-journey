@@ -142,3 +142,70 @@ Suppose PCs A, B, C, and D are connected to a switch.
 
 Switches are commonly used in homes, offices, schools, data centers, and enterprise networks to efficiently connect devices and improve network performance.
 
+
+
+
+>>>>>>>>>>>>>>>router>>>>>>>>>>>>>>>>
+
+
+
+## Router
+
+A **Router** is a networking device that connects different networks and forwards data packets between them. It operates at the **Network Layer (Layer 3)** of the **OSI Model** and uses **IP addresses** to determine the best path for data.
+
+### How a Router Works
+
+When a device sends data:
+
+1. The router reads the destination IP address.
+2. It checks its routing table.
+3. It selects the best route.
+4. It forwards the packet to the next network or destination.
+
+### Example
+
+* Your laptop is connected to a Wi-Fi router.
+* When you open a website, the router sends your request from your local network to the internet.
+* The website's response is then routed back to your device.
+
+### Features
+
+* Connects multiple networks.
+* Uses IP addresses for routing.
+* Provides internet access to multiple devices.
+* Supports wired and wireless connections.
+* Can perform NAT (Network Address Translation) and basic security functions.
+
+### Advantages
+
+✔ Connects different networks together.
+✔ Efficiently directs data packets.
+✔ Allows multiple devices to share an internet connection.
+✔ Improves network security through features like firewalls and access control.
+
+### Disadvantages
+
+✖ More expensive than hubs and switches.
+✖ Can require configuration and maintenance.
+✖ Routing may introduce slight delays compared to switching within a LAN.
+
+### Types of Routers
+
+1. **Wireless Router** – Provides Wi-Fi connectivity.
+2. **Wired Router** – Connects devices using Ethernet cables.
+3. **Core Router** – Used by large organizations and ISPs to manage high-volume traffic.
+4. **Edge Router** – Connects an internal network to external networks such as the internet.
+
+### Switch vs Router
+
+| Feature       | Switch              | Router             |
+| ------------- | ------------------- | ------------------ |
+| Layer         | Layer 2             | Layer 3            |
+| Uses          | MAC Address         | IP Address         |
+| Connects      | Devices in same LAN | Different Networks |
+| Main Function | Data Switching      | Packet Routing     |
+
+### Real-World Use
+
+Routers are used in homes, offices, schools, and data centers to connect local networks to the internet and enable communication between different networks.
+
