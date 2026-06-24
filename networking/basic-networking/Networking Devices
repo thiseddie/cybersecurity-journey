@@ -904,3 +904,251 @@ Security: WPA2
 ```
 
 In one line: **An Access Point is a device that creates a Wi-Fi network and connects wireless devices to a wired network.**
+
+
+
+
+
+>>>>>>>>>>>>>Bridge (Networking)>>>>>>>>>>>>>>>>
+
+
+
+
+
+
+
+# Bridge (Networking) – Complete Explanation
+
+A **Bridge** is a **Layer 2 (Data Link Layer)** networking device used to **connect two or more LAN segments** and reduce unnecessary traffic by forwarding data only to the correct segment.
+
+### Simple Definition
+
+A bridge acts like a **traffic controller** between network segments. It learns which devices are on which side and forwards frames only where they need to go.
+
+---
+
+## Why Do We Need a Bridge?
+
+Suppose you have one large LAN:
+
+```text
+PC1 ----\
+PC2 ----- Switch/Hub ---- PC3
+PC4 ----/
+```
+
+Every frame may be seen by all devices, creating unnecessary traffic.
+
+Using a bridge:
+
+```text
+LAN Segment A          LAN Segment B
+PC1                     PC3
+PC2                     PC4
+   \                   /
+    ----- Bridge -----
+```
+
+Now traffic between devices on the same segment stays local, reducing congestion.
+
+---
+
+# How a Bridge Works
+
+A bridge works using **MAC addresses**.
+
+### Step 1: Learning
+
+When a frame arrives, the bridge records:
+
+```text
+MAC Address → Port
+```
+
+Example:
+
+```text
+AA:AA:AA:AA:AA:AA → Port 1
+BB:BB:BB:BB:BB:BB → Port 2
+```
+
+This is called the **Bridge Table** or **Forwarding Table**.
+
+---
+
+### Step 2: Forwarding
+
+Suppose:
+
+```text
+Source MAC: AA
+Destination MAC: BB
+```
+
+The bridge checks its table.
+
+If BB is on Port 2:
+
+```text
+Port 1  --->  Port 2
+```
+
+Only Port 2 receives the frame.
+
+---
+
+### Step 3: Filtering
+
+If both source and destination are on the same segment:
+
+```text
+AA -> CC
+```
+
+and both are connected to Port 1,
+
+the bridge **does not forward** the frame to Port 2.
+
+This reduces traffic.
+
+---
+
+### Step 4: Flooding
+
+If the destination MAC is unknown:
+
+```text
+AA -> ZZ
+```
+
+the bridge sends the frame to all ports except the incoming one.
+
+This is called **flooding**.
+
+---
+
+# Bridge Table Example
+
+| MAC Address | Port |
+| ----------- | ---- |
+| AA          | 1    |
+| BB          | 2    |
+| CC          | 1    |
+| DD          | 2    |
+
+Frame:
+
+```text
+AA → DD
+```
+
+Bridge checks:
+
+```text
+DD → Port 2
+```
+
+Forwards only to Port 2.
+
+---
+
+# Types of Bridges
+
+## 1. Transparent Bridge
+
+Most common.
+
+* Learns MAC addresses automatically.
+* Devices don't know the bridge exists.
+
+Used in Ethernet networks.
+
+---
+
+## 2. Source Routing Bridge
+
+Used in older Token Ring networks.
+
+The sender specifies the route.
+
+---
+
+## 3. Wireless Bridge
+
+Connects two LANs wirelessly.
+
+Example:
+
+```text
+Building A ))) ((( Building B
+```
+
+Useful when running cables is difficult.
+
+---
+
+# Advantages of Bridges
+
+### 1. Reduces Traffic
+
+Filters unnecessary frames.
+
+### 2. Improves Performance
+
+Less congestion.
+
+### 3. Extends Network
+
+Connects multiple LAN segments.
+
+### 4. Simple Operation
+
+Works automatically using MAC learning.
+
+---
+
+# Disadvantages of Bridges
+
+### 1. Slower Than Switches
+
+Software-based bridges can be slower.
+
+### 2. Limited Ports
+
+Traditional bridges usually have few ports.
+
+### 3. Broadcast Traffic Still Passes
+
+Broadcast frames are forwarded.
+
+---
+
+# Bridge vs Hub
+
+| Feature             | Hub     | Bridge  |
+| ------------------- | ------- | ------- |
+| Layer               | Layer 1 | Layer 2 |
+| Uses MAC Address    | No      | Yes     |
+| Traffic Filtering   | No      | Yes     |
+| Collision Reduction | No      | Yes     |
+| Intelligent Device  | No      | Yes     |
+
+---
+
+# Bridge vs Switch
+
+| Feature      | Bridge  | Switch      |
+| ------------ | ------- | ----------- |
+| OSI Layer    | Layer 2 | Layer 2     |
+| Ports        | Few     | Many        |
+| Speed        | Lower   | Higher      |
+| MAC Learning | Yes     | Yes         |
+| Used Today   | Rarely  | Very Common |
+
+A **switch is essentially a multi-port bridge** with much better performance.
+
+---
+
+# Bridge in One Line
+
+**A bridge is a Layer 2 networking device that connects LAN segments and forwards frames using MAC addresses, reducing unnecessary network traffic.**
