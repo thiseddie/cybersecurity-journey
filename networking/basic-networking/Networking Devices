@@ -837,3 +837,70 @@ Modern modems commonly use:
 
 Modulation is the foundation of data communication. It allows information to travel efficiently through communication channels by modifying a carrier signal. Common techniques include **AM, FM, PM, ASK, FSK, PSK, QPSK, and QAM**, with **QAM and OFDM** being the most widely used in modern high-speed internet technologies.
 
+
+
+
+
+
+
+>>>>>>>>>>>>>>>>>>>>>>>Access Point (AP)>>>>>>>>>>>>>>>>>>
+
+
+
+
+
+
+### Access Point (AP) – Brief Explanation
+
+An **Access Point (AP)** is a networking device that allows **wireless devices (Wi-Fi clients)** such as phones, laptops, and tablets to connect to a wired network.
+
+Think of it as a **bridge between Wi-Fi devices and the internet/LAN**.
+
+#### How it works:
+
+1. The AP is connected to a router or switch using an Ethernet cable.
+2. It broadcasts a Wi-Fi network (SSID).
+3. Wireless devices connect to the AP.
+4. The AP forwards data between the wireless devices and the wired network.
+
+### Example
+
+In your college hostel, multiple APs may be installed on different floors:
+
+* Your phone connects to the nearest AP.
+* The AP sends your traffic to the campus network and internet.
+
+### Functions of an AP
+
+* Provides Wi-Fi coverage.
+* Handles wireless communication.
+* Supports security features like WPA2/WPA3.
+* Can manage many connected devices.
+
+### Difference Between Router and AP
+
+| Router                           | Access Point                         |
+| -------------------------------- | ------------------------------------ |
+| Connects network to the internet | Extends wireless access to a network |
+| Performs routing, NAT, DHCP      | Mainly provides Wi-Fi connectivity   |
+| Can work alone                   | Usually connected to a router/switch |
+
+### Cybersecurity Perspective
+
+When performing Wi-Fi reconnaissance using tools like Wireshark, APs are identified by:
+
+* **SSID** (Wi-Fi name)
+* **BSSID** (AP's MAC address)
+* Channel number
+* Encryption type (WPA2/WPA3/Open)
+
+Example:
+
+```
+SSID  : Hostel_WiFi
+BSSID : 00:11:22:33:44:55
+Channel: 6
+Security: WPA2
+```
+
+In one line: **An Access Point is a device that creates a Wi-Fi network and connects wireless devices to a wired network.**
