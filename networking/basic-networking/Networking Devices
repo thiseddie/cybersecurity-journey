@@ -917,7 +917,7 @@ In one line: **An Access Point is a device that creates a Wi-Fi network and conn
 
 
 
-# Bridge (Networking) – Complete Explanation
+# Bridge (Networking) 
 
 A **Bridge** is a **Layer 2 (Data Link Layer)** networking device used to **connect two or more LAN segments** and reduce unnecessary traffic by forwarding data only to the correct segment.
 
