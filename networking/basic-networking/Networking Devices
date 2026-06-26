@@ -1152,3 +1152,33 @@ A **switch is essentially a multi-port bridge** with much better performance.
 # Bridge in One Line
 
 **A bridge is a Layer 2 networking device that connects LAN segments and forwards frames using MAC addresses, reducing unnecessary network traffic.**
+
+
+
+
+
+
+
+>>>>>>>>>>>>>>>>>>>>>>Rrpeater>>>>>>>>>>>>>>>
+
+
+
+A repeater is a networking device used to extand the distane of a network by regenerating weak or degraded signals before forwarding them.
+
+Definition 
+
+a repeater receives a weak signal, amlifies or regenrates it, and retransimits it so the signal can travel a longer distance without losing quality.
+
+Working.
+
+1. receives the weak signal from ine network segment.
+2. regenerates the signal.
+3. sends the refreshed signal to the next network segment.
+
+Features.
+
+1- wotks at layer 1 of the osi model.
+2- does not filter or inspect date.
+3- does not have a mac adderss or i[ address.
+4- simply regenerates and forwards signals.
+5- used to increase the coverage of wired or wireless networks.
