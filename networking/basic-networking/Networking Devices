@@ -1192,3 +1192,13 @@ Advantages.
 4- imoroves communication over long cables.
 
 
+
+Disadvantages.
+
+
+1- cannot reduce network traffic.
+2- cannot filter data packets.
+4- extends collision domains in ethernet
+5- cannot connect different types of networks.
+
+
