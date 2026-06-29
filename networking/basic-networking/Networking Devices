@@ -1210,5 +1210,21 @@ applications
 3- long- distance fiber optic communication.
 
 
+simple diagram
+
+
+Computer A
+     │
+     │  Weak Signal
+     ▼
++-------------+
+|  Repeater   |
++-------------+
+     │
+     │  Regenerated Signal
+     ▼
+Computer B
+
+
 
 
