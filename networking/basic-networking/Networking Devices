@@ -1826,4 +1826,4 @@ This setup exposes only the required services while protecting sensitive systems
 * **DPI:** Inspects packet headers and payloads.
 * **ACL (Access Control List):** An ordered set of firewall rules defining permitted or denied traffic.
 
-This covers the fundamental firewall concepts you'll commonly encounter in networking, cybersecurity, penetration testing, and certification exams.
+
