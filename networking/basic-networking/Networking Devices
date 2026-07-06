@@ -1293,8 +1293,6 @@ If by "Gateway" you actually mean something else (for example, a project name fo
 
 
 
-If you're adding **Firewall** notes to your GitHub cybersecurity repository, here's a complete but concise explanation covering all the important concepts.
-
 # Firewall
 
 A **Firewall** is a **network security system** that monitors, filters, and controls incoming and outgoing network traffic based on predefined security rules. It acts as a **barrier** between a trusted internal network and an untrusted external network (such as the Internet).
