@@ -3,3 +3,17 @@
 
 the osi model is a 7- layer framework that explains how data from one device to another over a network each layer has a specific role and
 communications with the layer directily above and below it 
+
+
+
+here's a simple explanation of each layer, starting from the top:
+
+| Layer | Name         | Main Function                                                         | Example                                   |
+| ----- | ------------ | --------------------------------------------------------------------- | ----------------------------------------- |
+| **7** | Application  | Provides network services to user applications                        | Web browser, email client                 |
+| **6** | Presentation | Translates, encrypts, and compresses data                             | SSL/TLS encryption, JPEG, MP3             |
+| **5** | Session      | Establishes, manages, and terminates communication sessions           | Login sessions, video calls               |
+| **4** | Transport    | Ensures reliable data delivery, error checking, and flow control      | TCP, UDP                                  |
+| **3** | Network      | Determines the best path for data and handles logical addressing      | IP, routers                               |
+| **2** | Data Link    | Transfers data between devices on the same network and detects errors | Ethernet, MAC addresses, switches         |
+| **1** | Physical     | Transmits raw bits over the physical medium                           | Cables, fiber optics, Wi-Fi radio signals |
