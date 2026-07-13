@@ -17,3 +17,14 @@ here's a simple explanation of each layer, starting from the top:
 | **3** | Network      | Determines the best path for data and handles logical addressing      | IP, routers                               |
 | **2** | Data Link    | Transfers data between devices on the same network and detects errors | Ethernet, MAC addresses, switches         |
 | **1** | Physical     | Transmits raw bits over the physical medium                           | Cables, fiber optics, Wi-Fi radio signals |
+
+
+
+.......explaining the every single layer of osi model...............
+
+############### Layer 7 - Application layer (osi model)#############
+
+
+the application layer is the topmost layer of the osi model it is the layer that directly interacts with the user and application software.
+it provides network services to applications like web browsers, email clients, file transfer software and messaging apps.
+
