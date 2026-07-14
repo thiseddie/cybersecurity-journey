@@ -28,3 +28,10 @@ here's a simple explanation of each layer, starting from the top:
 the application layer is the topmost layer of the osi model it is the layer that directly interacts with the user and application software.
 it provides network services to applications like web browsers, email clients, file transfer software and messaging apps.
 
+real life example.
+
+imagine you're ordering food online.
+== you open the app
+== search for a restaurant.
+== place on order 
+you only see the app
