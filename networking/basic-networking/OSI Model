@@ -39,3 +39,5 @@ you only see the app.
 behind the screnes, the application later allows zomato to communicate with its server and
 exchange information.
 
+without layer 7, the app wouldn't be able to send or receive date.
+
