@@ -113,12 +113,12 @@ HTTPS/TLS
 Input validation
 Everyday Examples
 Activity	Application Layer?
-Browsing Google	✅
-Watching YouTube	✅
-Sending WhatsApp messages	✅
-Using Gmail	✅
-Video calling on Zoom	✅
-Uploading files to Drive	✅
+Browsing Google	
+Watching YouTube	
+Sending WhatsApp messages	
+Using Gmail	
+Video calling on Zoom	
+Uploading files to Drive	
 Communication Flow
 User
    │
@@ -127,32 +127,3 @@ Application (Chrome, Gmail, WhatsApp)
    │
    ▼
 Layer 7 (Application Layer)
-   │
-   ▼
-Layer 6 (Presentation Layer)
-   │
-   ▼
-Layer 5 (Session Layer)
-   │
-   ▼
-...
-Physical Layer
-Easy Way to Remember
-Application Layer = User Services
-Think:
-"If the user directly uses it, Layer 7 is involved."
-Examples:
-Browsing websites 🌐
-Sending emails 📧
-Chatting on WhatsApp 💬
-Watching Netflix 🎬
-Uploading files 📁
-Interview Questions
-Q1. Which is the topmost layer of the OSI model?
-Answer: Application Layer (Layer 7)
-Q2. Which protocol is used to access websites?
-Answer: HTTP and HTTPS
-Q3. Which protocol converts domain names into IP addresses?
-Answer: DNS
-Q4. Which protocol is used for secure remote login?
-Answer: SSH
