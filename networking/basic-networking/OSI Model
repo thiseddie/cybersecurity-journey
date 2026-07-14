@@ -34,4 +34,8 @@ imagine you're ordering food online.
 == you open the app
 == search for a restaurant.
 == place on order 
-you only see the app
+you only see the app.
+
+behind the screnes, the application later allows zomato to communicate with its server and
+exchange information.
+
