@@ -41,3 +41,118 @@ exchange information.
 
 without layer 7, the app wouldn't be able to send or receive date.
 
+
+
+What Does the Application Layer Do?
+1. Provides Network Services
+It allows applications to use network resources.
+Example:
+Web browsing
+Email
+Video calls
+Online games
+2. User Authentication
+Checks whether a user is allowed to access a service.
+Example:
+Logging into Gmail
+Logging into Instagram
+Banking applications
+3. File Transfer
+Allows sending and receiving files.
+Example:
+Downloading PDFs
+Uploading assignments
+Sending files via FTP
+4. Email Services
+Helps send and receive emails.
+Example:
+Gmail
+Outlook
+Yahoo Mail
+5. Name Resolution
+Converts website names into IP addresses using DNS.
+Example:
+You type
+www.google.com
+DNS converts it into something like
+142.250.182.14
+so your computer knows where to connect.
+Common Protocols of Layer 7
+Protocol	Purpose
+HTTP	Loads websites
+HTTPS	Secure websites
+FTP	File transfer
+SMTP	Sending emails
+POP3	Receiving emails
+IMAP	Accessing emails
+DNS	Converts domain names to IP addresses
+Telnet	Remote login (not secure)
+SSH	Secure remote login
+Real Example (Opening Google)
+Suppose you open
+https://www.google.com
+Here's what happens:
+Chrome asks the Application Layer to open Google.
+The Application Layer sends a DNS request to find Google's IP address.
+After getting the IP address, it sends an HTTPS request.
+Google responds with the webpage.
+The webpage is displayed in your browser.
+In Cybersecurity
+The Application Layer is a common target for attacks because it handles user-facing services.
+Examples include:
+SQL Injection
+Cross-Site Scripting (XSS)
+Cross-Site Request Forgery (CSRF)
+Brute-force login attacks
+Phishing websites
+Security tools include:
+Web Application Firewalls (WAFs)
+Authentication systems
+CAPTCHA
+HTTPS/TLS
+Input validation
+Everyday Examples
+Activity	Application Layer?
+Browsing Google	✅
+Watching YouTube	✅
+Sending WhatsApp messages	✅
+Using Gmail	✅
+Video calling on Zoom	✅
+Uploading files to Drive	✅
+Communication Flow
+User
+   │
+   ▼
+Application (Chrome, Gmail, WhatsApp)
+   │
+   ▼
+Layer 7 (Application Layer)
+   │
+   ▼
+Layer 6 (Presentation Layer)
+   │
+   ▼
+Layer 5 (Session Layer)
+   │
+   ▼
+...
+Physical Layer
+Easy Way to Remember
+Application Layer = User Services
+Think:
+"If the user directly uses it, Layer 7 is involved."
+Examples:
+Browsing websites 🌐
+Sending emails 📧
+Chatting on WhatsApp 💬
+Watching Netflix 🎬
+Uploading files 📁
+Interview Questions
+Q1. Which is the topmost layer of the OSI model?
+Answer: Application Layer (Layer 7)
+Q2. Which protocol is used to access websites?
+Answer: HTTP and HTTPS
+Q3. Which protocol converts domain names into IP addresses?
+Answer: DNS
+Q4. Which protocol is used for secure remote login?
+Answer: SSH
