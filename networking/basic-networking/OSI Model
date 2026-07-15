@@ -157,3 +157,17 @@ Example: When you log in to your bank's website using HTTPS, your password is en
 Common technologies:
 SSL
 TLS
+
+3. Decryption
+On the receiving side, the encrypted data is decrypted back into its original form.
+Example:
+Sender:
+Password → Encrypt → Send
+
+Receiver:
+Receive → Decrypt → Password
+4. Data Compression
+It reduces the size of data before sending it to save bandwidth and speed up transmission.
+Example:
+Compressing an image before sending it over the internet.
+Compressing a video during streaming.
