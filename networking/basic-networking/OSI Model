@@ -132,3 +132,13 @@ Layer 7 (Application Layer)
 
 
 ##### Layer 6 Presentation ######
+
+
+
+
+
+•••••presentation..
+
+
+The Presentation Layer (Layer 6) is responsible for translating, encrypting/decrypting, and compressing data. It ensures that data sent by one device can be understood by another, even if they use different data formats.
+Think of it as a translator between the Application Layer and the lower network layers.
