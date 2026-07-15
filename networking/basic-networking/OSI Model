@@ -171,3 +171,32 @@ It reduces the size of data before sending it to save bandwidth and speed up tra
 Example:
 Compressing an image before sending it over the internet.
 Compressing a video during streaming.
+
+Real-Life Example
+Imagine you're sending a photo on WhatsApp:
+Application Layer (Layer 7): You tap Send.
+Presentation Layer (Layer 6):
+Compresses the image.
+Encrypts it.
+Converts it into a format the receiver can understand.
+Lower layers send the data across the network.
+On the receiver's phone, Layer 6:
+Decrypts the data.
+Decompresses the image.
+Converts it back into a displayable format.
+Common Data Formats Handled
+JPEG
+PNG
+GIF
+MP3
+MP4
+ASCII
+Unicode
+JSON
+XML
+Easy Analogy
+Imagine you and your friend speak different languages.
+You speak English.
+Your friend speaks French.
+A translator converts your English into French before sending the message and translates it back on the other side.
+The Presentation Layer acts like that translator.
