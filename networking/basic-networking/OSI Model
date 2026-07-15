@@ -142,3 +142,18 @@ Layer 7 (Application Layer)
 
 The Presentation Layer (Layer 6) is responsible for translating, encrypting/decrypting, and compressing data. It ensures that data sent by one device can be understood by another, even if they use different data formats.
 Think of it as a translator between the Application Layer and the lower network layers.
+
+
+Main Functions
+1. Data Translation
+Different systems may represent data differently. The Presentation Layer converts data into a common format.
+Example:
+Windows sends text in one encoding.
+Linux or macOS receives it.
+The Presentation Layer ensures the text is displayed correctly.
+2. Encryption
+It encrypts data before transmission so that unauthorized people cannot read it.
+Example: When you log in to your bank's website using HTTPS, your password is encrypted before being sent.
+Common technologies:
+SSL
+TLS
