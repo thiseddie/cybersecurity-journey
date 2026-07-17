@@ -256,22 +256,3 @@ ASP.NET_SessionId
 
 These session IDs allow the server to recognize an authenticated user across multiple requests.
 
-Example
-
-Imagine you log in to an online shopping website.
-
-You enter your username and password.
-The server verifies your credentials.
-A session is created.
-The server sends a unique session ID to your browser.
-Every request you make includes that session ID, allowing the server to identify you without requiring you to log in again.
-When you log out or the session expires, the session is terminated.
-Key Points
-Establishes communication sessions.
-Maintains active sessions.
-Terminates sessions when communication ends.
-Supports session recovery after interruptions.
-Enables continuous communication between applications.
-Interview Definition
-
-The Session Layer (Layer 5) establishes, manages, synchronizes, and terminates communication sessions between applications, ensuring continuous and organized data exchange throughout the communication process.
