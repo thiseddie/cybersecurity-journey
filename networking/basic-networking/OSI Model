@@ -200,3 +200,6 @@ You speak English.
 Your friend speaks French.
 A translator converts your English into French before sending the message and translates it back on the other side.
 The Presentation Layer acts like that translator.
+
+
+#####################OSI Model – Layer 5 (Session Layer)##########################
