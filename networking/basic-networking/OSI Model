@@ -203,3 +203,11 @@ The Presentation Layer acts like that translator.
 
 
 #####################OSI Model – Layer 5 (Session Layer)##########################
+
+
+
+What is the Session Layer?
+
+The Session Layer (Layer 5) is responsible for establishing, managing, and terminating communication sessions between two devices or applications.
+
+Think of it as a conversation manager. Before two applications exchange data, it creates a session. While communication is ongoing, it keeps the session active. When the communication is complete, it closes the session.
