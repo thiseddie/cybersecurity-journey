@@ -400,18 +400,4 @@ Imagine you are sending a **100-page book** by courier.
 * If one parcel is lost, it asks for **only that parcel** to be sent again.
 * At the destination, it arranges all parcels in the correct order to recreate the original book.
 
----
-
-## One-Line Exam Definition
-
-> **The Transport Layer (Layer 4) provides end-to-end communication by performing segmentation, flow control, error control, multiplexing, and reliable data delivery using TCP or UDP.**
-
-### **Important exam points to remember**
-
-* **Layer Number:** 4
-* **PDU:** Segment (TCP) / Datagram (UDP)
-* **Protocols:** TCP, UDP
-* **Functions:** Segmentation, Reassembly, Flow Control, Error Control, End-to-End Communication, Multiplexing/Demultiplexing
-* **Uses:** Reliable communication between applications using port numbers.
-
 
