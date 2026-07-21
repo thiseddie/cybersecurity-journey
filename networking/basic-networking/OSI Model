@@ -377,7 +377,7 @@ If you're browsing the web while listening to Spotify, the Transport Layer deliv
 | Feature          | TCP              | UDP                      |
 | ---------------- | ---------------- | ------------------------ |
 | Connection       | Yes              | No                       |
-| Reliable         | ✅ Yes            | ❌ No                     |
+| Reliable         | ✅ Yes           |  No                      |
 | Speed            | Slower           | Faster                   |
 | Error Recovery   | Yes              | No                       |
 | Ordered Delivery | Yes              | No                       |
