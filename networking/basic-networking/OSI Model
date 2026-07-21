@@ -256,3 +256,162 @@ ASP.NET_SessionId
 
 These session IDs allow the server to recognize an authenticated user across multiple requests.
 
+
+
+
+
+######################   layer  4  of osi model --transport ######################
+
+
+# **OSI Model – Layer 4: Transport Layer (Exam Explanation)**
+
+The **Transport Layer** is the **4th layer** of the OSI model. Its main job is to provide **end-to-end communication** between applications running on different devices. It ensures that data reaches the correct application **reliably and in the correct order**.
+
+---
+
+## Main Functions of the Transport Layer
+
+### 1. **Segmentation and Reassembly**
+
+* Large data from the application layer is divided into **smaller pieces called segments**.
+* Each segment is given a sequence number.
+* At the receiver's side, these segments are **reassembled** into the original message.
+
+**Example:**
+If you send a **100 MB video**, the Transport Layer breaks it into many small segments before sending.
+
+---
+
+### 2. **End-to-End Communication**
+
+* It provides communication between the **source application** and the **destination application**, not just between two devices.
+
+**Example:**
+You send a WhatsApp message from your phone to your friend's phone. The Transport Layer ensures it reaches the **WhatsApp application**, not another app.
+
+---
+
+### 3. **Flow Control**
+
+* Prevents the sender from sending data **faster than the receiver can process**.
+
+**Example:**
+If the receiver can process only **100 segments per second**, the sender slows down to avoid overwhelming it.
+
+---
+
+### 4. **Error Control**
+
+* Detects lost or corrupted segments.
+* Requests retransmission of missing data.
+* Ensures reliable delivery.
+
+**Example:**
+If segment **5** is lost during transmission:
+
+```
+Sent:      1 2 3 4 5 6 7
+Received:  1 2 3 4   6 7
+```
+
+The Transport Layer asks the sender to **send segment 5 again**.
+
+---
+
+### 5. **Multiplexing and Demultiplexing**
+
+* Uses **port numbers** to identify different applications.
+* Allows multiple applications to use the network simultaneously.
+
+**Example:**
+
+| Application | Port Number |
+| ----------- | ----------: |
+| HTTP        |          80 |
+| HTTPS       |         443 |
+| FTP         |          21 |
+| SMTP        |          25 |
+| DNS         |          53 |
+
+If you're browsing the web while listening to Spotify, the Transport Layer delivers data to the correct application using port numbers.
+
+---
+
+## Transport Layer Protocols
+
+### **TCP (Transmission Control Protocol)**
+
+* Connection-oriented
+* Reliable
+* Error checking
+* Data arrives in order
+* Slower
+
+**Used in:**
+
+* Web browsing (HTTPS)
+* Email
+* File transfer
+
+---
+
+### **UDP (User Datagram Protocol)**
+
+* Connectionless
+* Faster
+* No guarantee of delivery
+* No retransmission
+* Lower overhead
+
+**Used in:**
+
+* Online gaming
+* Video streaming
+* Voice calls (VoIP)
+* Live broadcasts
+
+---
+
+## TCP vs UDP
+
+| Feature          | TCP              | UDP                      |
+| ---------------- | ---------------- | ------------------------ |
+| Connection       | Yes              | No                       |
+| Reliable         | ✅ Yes            | ❌ No                     |
+| Speed            | Slower           | Faster                   |
+| Error Recovery   | Yes              | No                       |
+| Ordered Delivery | Yes              | No                       |
+| Examples         | HTTP, HTTPS, FTP | Gaming, Video Calls, DNS |
+
+---
+
+## Data Unit at Layer 4
+
+The Protocol Data Unit (PDU) of the Transport Layer is called a **Segment** (for TCP). For UDP, it is commonly called a **Datagram**.
+
+---
+
+## Real-Life Analogy
+
+Imagine you are sending a **100-page book** by courier.
+
+* The **Transport Layer** divides the book into multiple packets (pages grouped into parcels).
+* It numbers each parcel.
+* If one parcel is lost, it asks for **only that parcel** to be sent again.
+* At the destination, it arranges all parcels in the correct order to recreate the original book.
+
+---
+
+## One-Line Exam Definition
+
+> **The Transport Layer (Layer 4) provides end-to-end communication by performing segmentation, flow control, error control, multiplexing, and reliable data delivery using TCP or UDP.**
+
+### **Important exam points to remember**
+
+* **Layer Number:** 4
+* **PDU:** Segment (TCP) / Datagram (UDP)
+* **Protocols:** TCP, UDP
+* **Functions:** Segmentation, Reassembly, Flow Control, Error Control, End-to-End Communication, Multiplexing/Demultiplexing
+* **Uses:** Reliable communication between applications using port numbers.
+
+
