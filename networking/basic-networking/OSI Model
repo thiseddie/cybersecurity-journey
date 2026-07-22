@@ -464,6 +464,3 @@ Think of sending a parcel:
 | **Main Device**      | Router                         |
 | **Protocols**        | IPv4, IPv6, ICMP, IPsec        |
 
-**In one sentence:** The **Network Layer (Layer 3)** is responsible for **routing packets between different networks using IP addresses**, ensuring data reaches the correct destination.
-
-
