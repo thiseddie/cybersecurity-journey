@@ -408,3 +408,62 @@ Imagine you are sending a **100-page book** by courier.
 ##################### Layer 3 of the OSI Model: Network Layer ####################
 
 
+
+
+### Layer 3 of the OSI Model: Network Layer
+
+The **Network Layer (Layer 3)** is responsible for **moving data packets from one network to another**. It determines the best path for data to travel from the source device to the destination device.
+
+#### Main Functions
+
+* **Logical Addressing:** Uses **IP (Internet Protocol) addresses** to identify devices on different networks.
+* **Routing:** Finds the best path for data to reach its destination.
+* **Packet Forwarding:** Sends packets from one router to another until they reach the destination.
+* **Fragmentation and Reassembly:** Splits large packets into smaller ones if required by the network and reassembles them at the destination (depending on the protocol).
+
+#### Data Unit
+
+* **Packet**
+
+#### Devices Used
+
+* **Router**
+* Layer 3 Switch (in some networks)
+
+#### Common Protocols
+
+* **IPv4**
+* **IPv6**
+* **ICMP** (used for error reporting and diagnostics, such as `ping`)
+* **IPsec** (provides security for IP communications)
+
+#### Example
+
+Suppose you send an email from your laptop in Delhi to a friend in Mumbai:
+
+1. The **Transport Layer** creates data segments.
+2. The **Network Layer** adds the **source and destination IP addresses**.
+3. Routers examine the destination IP address and choose the best route.
+4. The packet travels through multiple networks until it reaches your friend's device.
+
+#### Real-Life Analogy
+
+Think of sending a parcel:
+
+* The **destination address** on the parcel is like the **IP address**.
+* The **postal service** decides which roads and distribution centers to use, similar to how the **Network Layer** chooses the best route for packets.
+
+#### Summary Table
+
+| Feature              | Description                    |
+| -------------------- | ------------------------------ |
+| **OSI Layer**        | Layer 3 – Network              |
+| **Primary Function** | Routing and logical addressing |
+| **Data Unit**        | Packet                         |
+| **Address Used**     | IP Address                     |
+| **Main Device**      | Router                         |
+| **Protocols**        | IPv4, IPv6, ICMP, IPsec        |
+
+**In one sentence:** The **Network Layer (Layer 3)** is responsible for **routing packets between different networks using IP addresses**, ensuring data reaches the correct destination.
+
+
