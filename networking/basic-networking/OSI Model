@@ -473,9 +473,6 @@ Think of sending a parcel:
 
 
 
-
-Here is a clean, concise, and formatted explanation of the Data Link layer, designed specifically to be copied and pasted directly into your Git repository's `README.md` or documentation.
-
 ## 2 | Data Link Layer
 
 The Data Link layer is responsible for the reliable, node-to-node delivery of data across a single physical network. It acts as the bridge between the physical hardware and the network software by taking the raw bitstream from the Physical layer (Layer 1) and packaging it into logical structures called **Frames**.
