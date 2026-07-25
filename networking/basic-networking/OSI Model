@@ -507,8 +507,6 @@ To seamlessly connect hardware with software, the IEEE split Layer 2 into two di
 
 
 
-Applying the concept of **Layer 1 (The Physical Layer)** from the OSI networking model to a GitHub repository is a great mental exercise.
-
 In traditional networking, Layer 1 is responsible for the raw, unformatted transmission of bits (0s and 1s) over a physical medium—think Ethernet cables, fiber optics, electrical signals, and network interface cards. It doesn’t care what the data *means*; it just moves the bits.
 
 If we map this "Physical Layer" to a GitHub repository, we can look at it in two ways: **the literal hardware** and **the foundational data structure**.
