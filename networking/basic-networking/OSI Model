@@ -499,3 +499,8 @@ To seamlessly connect hardware with software, the IEEE split Layer 2 into two di
 
 1. **Logical Link Control (LLC):** The upper sublayer. It interfaces with the Network layer (Layer 3) to identify which network protocol (like IPv4 or IPv6) is being used and provides multiplexing.
 2. **Media Access Control (MAC):** The lower sublayer. It interfaces with the Physical layer (Layer 1), handling physical addressing, framing, and controlling access to the actual physical medium.
+
+
+
+
+#################### layer 1 --- physical and data  ############
