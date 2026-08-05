@@ -2,3 +2,18 @@ The TCP/IP model (Transmission Control Protocol/Internet Protocol) is the founda
 of rules that governs how computers communicate over the internet. You can think of it as 
 the universal language that allows devices from different manufacturers, running different 
 operating systems, to exchange data seamlessly.
+
+
+
+
+
+
+
+
+
+1. Core Architecture and Data Flow
+The TCP/IP model uses a modular, layered architecture. When you send data, it travels down
+the layers on the sender's device (Encapsulation) and up the layers on the receiver's device (Decapsulation).
+Encapsulation: As data moves down the stack, each layer adds its own header (and sometimes a trailer) containing control information.
+Data → Segment (Transport) → Packet (Internet) → Frame (Network Access) → Bits (Physical).
+Decapsulation: The receiving machine strips away these headers layer by layer as the data moves back up to the application.
