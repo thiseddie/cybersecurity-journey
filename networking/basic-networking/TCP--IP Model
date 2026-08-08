@@ -24,7 +24,8 @@ Decapsulation: The receiving machine strips away these headers layer by layer as
 While the OSI model uses 7 layers, the strict TCP/IP model condenses these into 4 discrete layers.
 
 Layer 4: Application Layer
-This is the top layer where user applications interact with the network. It handles high-level protocols, issues of representation (data formatting), and session control. (Note: It combines the OSI Application, Presentation, and Session layers).
+This is the top layer where user applications interact with the network. It handles high-level protocols, issues of representation
+(data formatting), and session control. (Note: It combines the OSI Application, Presentation, and Session layers).
 Key Features: Provides network services directly to software applications. Handles encryption, compression, and user authentication.
 Common Protocols:
 HTTP/HTTPS: Web browsing.
