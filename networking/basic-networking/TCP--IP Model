@@ -18,3 +18,18 @@ the layers on the sender's device (Encapsulation) and up the layers on the recei
 Encapsulation: As data moves down the stack, each layer adds its own header (and sometimes a trailer) containing control information.
 Data → Segment (Transport) → Packet (Internet) → Frame (Network Access) → Bits (Physical).
 Decapsulation: The receiving machine strips away these headers layer by layer as the data moves back up to the application.
+
+
+2. The Four Layers of the TCP/IP Model
+While the OSI model uses 7 layers, the strict TCP/IP model condenses these into 4 discrete layers.
+
+Layer 4: Application Layer
+This is the top layer where user applications interact with the network. It handles high-level protocols, issues of representation (data formatting), and session control. (Note: It combines the OSI Application, Presentation, and Session layers).
+Key Features: Provides network services directly to software applications. Handles encryption, compression, and user authentication.
+Common Protocols:
+HTTP/HTTPS: Web browsing.
+FTP/SFTP: File transfer.
+SMTP, POP3, IMAP: Email routing and retrieval.
+DNS: Translates human-readable domain names into IP addresses.
+SSH: Secure remote command-line access.
+Data Unit: Message / Data.
