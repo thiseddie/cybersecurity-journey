@@ -15,7 +15,8 @@ operating systems, to exchange data seamlessly.
 The TCP/IP model uses a modular, layered architecture. When you send data, it travels down
 the layers on the sender's device (Encapsulation) and up the layers on the receiver's device
 (Decapsulation).
-Encapsulation: As data moves down the stack, each layer adds its own header (and sometimes a trailer) containing control information.
+Encapsulation: As data moves down the stack, each layer adds its own header (and sometimes a trailer)
+containing control information.
 Data → Segment (Transport) → Packet (Internet) → Frame (Network Access) → Bits (Physical).
 Decapsulation: The receiving machine strips away these headers layer by layer as the data moves back up to the application.
 
@@ -34,3 +35,15 @@ SMTP, POP3, IMAP: Email routing and retrieval.
 DNS: Translates human-readable domain names into IP addresses.
 SSH: Secure remote command-line access.
 Data Unit: Message / Data.
+
+
+Layer 3: Transport Layer (Host-to-Host)
+This layer is responsible for end-to-end communication, error recovery, and flow control. It ensures that data arrives successfully and is
+reassembled in the correct order.
+Key Features: Multiplexing (using port numbers to route data to the correct application), segmentation, and establishing connections.
+Core Protocols (The "Types" of Transport):
+TCP (Transmission Control Protocol): Connection-oriented. Guarantees delivery, order, and error-checking via a "Three-way Handshake" 
+(SYN, SYN-ACK, ACK). Slower but perfectly reliable (used for web pages, file downloads, emails).
+UDP (User Datagram Protocol): Connectionless. "Fire and forget." No guarantee of delivery or order. Extremely fast with low overhead 
+(used for video streaming, online gaming, VoIP).
+Data Unit: Segment (TCP) or Datagram (UDP).
