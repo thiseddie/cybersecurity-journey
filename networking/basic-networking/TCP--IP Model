@@ -52,7 +52,8 @@ Data Unit: Segment (TCP) or Datagram (UDP).
 
 
 Layer 2: Internet Layer
-Also known as the Network layer, this handles the logical routing of data across independent networks. It determines the best path for data to travel from the source IP to the destination IP.
+Also known as the Network layer, this handles the logical routing of data across independent networks. It determines the best path for data to travel from
+the source IP to the destination IP.
 Key Features: Logical addressing (IP addresses), routing path determination, and fragmentation (breaking packets down if they exceed the network's maximum transmission unit).
 Common Protocols:
 IPv4 / IPv6: The primary protocols for routing packets globally.
