@@ -68,7 +68,8 @@ Data Unit: Packet.
 Layer 1: Network Access Layer (Link Layer)
 This is the lowest layer, representing the physical hardware and the immediate local network connection. It defines how data is physically sent through 
 the network medium (cables, radio waves). It encompasses both the Data Link and Physical layers of the OSI model.
-Key Features: Hardware addressing (MAC addresses), converting digital packets into electrical/optical/radio signals, and managing access to the physical medium.
+Key Features: Hardware addressing (MAC addresses), converting digital packets into electrical/optical/radio signals, and managing access to the physical
+medium.
 Common Protocols/Standards:
 Ethernet (IEEE 802.3): Wired LAN standard.
 Wi-Fi (IEEE 802.11): Wireless LAN standard.
