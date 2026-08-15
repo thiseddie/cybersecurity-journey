@@ -61,3 +61,15 @@ IPv4 / IPv6: The primary protocols for routing packets globally.
 ICMP (Internet Control Message Protocol): Used for diagnostics and error reporting (e.g., ping and traceroute commands).
 IPsec: Secures data at the IP level via encryption.
 Data Unit: Packet.
+
+
+
+
+Layer 1: Network Access Layer (Link Layer)
+This is the lowest layer, representing the physical hardware and the immediate local network connection. It defines how data is physically sent through the network medium (cables, radio waves). It encompasses both the Data Link and Physical layers of the OSI model.
+Key Features: Hardware addressing (MAC addresses), converting digital packets into electrical/optical/radio signals, and managing access to the physical medium.
+Common Protocols/Standards:
+Ethernet (IEEE 802.3): Wired LAN standard.
+Wi-Fi (IEEE 802.11): Wireless LAN standard.
+ARP (Address Resolution Protocol): Maps an IP address to a physical MAC address on a local network.
+Data Unit: Frame (Logical) / Bits (Physical).
