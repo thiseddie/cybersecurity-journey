@@ -532,3 +532,554 @@ In a Git repo, this is found inside the hidden `.git` folder:
 ### Why does this matter?
 
 As a developer, you almost never interact with Layer 1. You operate at the "Application Layer" (Layer 7)—clicking buttons on the GitHub website, reading pull requests, or running high-level commands like `git merge`. But under the hood, everything relies on that base physical layer reliably storing and transmitting those raw bits.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ChatGPT said:
+Security Testing Report
+GDG on Campus RIT Roorkee — gdgrit.vercel.app
+
+Prepared by: Eddie
+Date: 17 August 2026
+Target: https://gdgrit.vercel.app
+Testing type: External / unauthenticated testing
+Tools used: Nmap, cURL, browser developer tools
+1. Introduction
+
+I tested the publicly available website gdgrit.vercel.app to understand how it handles HTTP requests, redirects, client-side parameters, security headers, Firebase communication, and publicly accessible resources.
+
+The testing was performed from a Linux machine using normal HTTP requests and network enumeration tools.
+
+The purpose of this report is to document the things I observed and point out areas that should be reviewed by the website developer.
+
+I have tried to distinguish between issues that were actually confirmed during testing and things that only need further investigation.
+2. Scope
+
+The testing was limited to the following:
+
+    gdgrit.vercel.app
+    Publicly accessible website resources
+    HTTP/HTTPS behavior
+    redirect URL parameter
+    Response headers
+    Public HTML/JavaScript references
+    Firebase Firestore communication visible from the browser
+    External resources linked from the website
+    Google Drive resource linked from the website
+
+I did not attempt destructive actions, database modification, credential attacks, denial-of-service attacks, or unauthorized access to private accounts.
+3. Tools Used
+Nmap
+
+Used to identify publicly exposed network services:
+
+nmap -sV -sC gdgrit.vercel.app
+
+cURL
+
+Used to inspect HTTP responses:
+
+curl -I 'https://gdgrit.vercel.app/?redirect=https://ritroorkee.com'
+
+and:
+
+curl -s 'https://gdgrit.vercel.app/?redirect=https://example.com'
+
+I also used verbose cURL testing for the javascript: URL:
+
+curl -v 'https://gdgrit.vercel.app/?redirect=javascript:alert(1)'
+
+4. Nmap Results
+
+The scan returned:
+
+Nmap scan report for gdgrit.vercel.app (216.198.79.3)
+
+Host is up.
+
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  ssl/http?
+
+The service identified itself as Vercel.
+
+Port 80 returned:
+
+HTTP/1.0 308 Permanent Redirect
+Location: https:///
+server: Vercel
+
+Port 443 was available over HTTPS and presented a valid wildcard Vercel certificate.
+Assessment
+
+The HTTP service being available on port 80 is not necessarily a problem. It is being used to redirect visitors to HTTPS.
+
+The HTTPS configuration was working during the test.
+
+Status: No vulnerability confirmed.
+5. HTTPS / TLS
+
+During the cURL test, the connection used:
+
+TLSv1.3
+TLS_AES_128_GCM_SHA256
+X25519MLKEM768
+
+The certificate information showed:
+
+Subject: CN=*.vercel.app
+
+The certificate also matched:
+
+gdgrit.vercel.app
+
+cURL reported:
+
+SSL certificate verified via OpenSSL.
+
+The certificate was valid during the assessment.
+Assessment
+
+I did not find a TLS certificate validation problem.
+
+The certificate expiration date shown by the test was:
+
+Sep 26 2026
+
+Since the site is hosted on Vercel, certificate management may be handled automatically by the platform. Therefore, I would not classify the expiration date itself as a vulnerability.
+
+Status: No vulnerability found.
+6. HSTS
+
+The response included:
+
+strict-transport-security:
+max-age=63072000; includeSubDomains; preload
+
+This is a positive security configuration.
+
+It tells compatible browsers to use HTTPS rather than attempting ordinary HTTP connections.
+Assessment
+
+Status: Good security control.
+7. Redirect Parameter Testing
+
+I tested the following request:
+
+curl -I 'https://gdgrit.vercel.app/?redirect=https://ritroorkee.com'
+
+The server responded:
+
+HTTP/2 200
+content-type: text/html; charset=utf-8
+server: Vercel
+
+Importantly, the response did not contain:
+
+Location: https://ritroorkee.com
+
+This means the test did not demonstrate an open redirect.
+
+I also tested another domain:
+
+curl -s 'https://gdgrit.vercel.app/?redirect=https://example.com'
+
+The website returned its normal HTML page.
+Assessment
+
+The redirect parameter is accepted by the application, but I did not obtain evidence that the server actually redirects the browser to an arbitrary external domain.
+
+Therefore, I would not report this as a confirmed open redirect.
+Recommendation
+
+The developers should still review how the parameter is handled.
+
+If the application is supposed to redirect users, it should only allow safe relative paths or explicitly approved domains.
+
+Severity: Informational / Low
+Status: Potential issue, not confirmed.
+8. javascript: URL Testing
+
+I tested:
+
+https://gdgrit.vercel.app/?redirect=javascript:alert(1)
+
+The server returned:
+
+HTTP/2 200
+content-type: text/html; charset=utf-8
+content-length: 123929
+
+The response contained the normal website HTML.
+Important observation
+
+The request being accepted does not prove that XSS exists.
+
+For example, receiving:
+
+200 OK
+
+after sending:
+
+javascript:alert(1)
+
+does not mean that alert(1) was executed.
+
+To confirm XSS, the supplied value would need to reach a browser execution context and actually execute.
+
+I did not obtain that evidence from the tests performed.
+Assessment
+
+Potential client-side injection/redirect handling issue.
+
+Confirmed XSS: No.
+
+Severity: Needs further investigation.
+9. Security Headers
+
+The response contained HSTS, but I did not observe the following headers in the supplied response:
+
+Content-Security-Policy
+X-Content-Type-Options
+X-Frame-Options
+
+9.1 Content-Security-Policy
+
+A CSP can reduce the impact of certain types of script injection.
+9.2 X-Content-Type-Options
+
+The following is commonly recommended:
+
+X-Content-Type-Options: nosniff
+
+This helps prevent browsers from MIME-sniffing certain responses.
+9.3 Clickjacking protection
+
+Depending on the application's requirements, the site could use:
+
+X-Frame-Options: DENY
+
+or preferably a CSP directive such as:
+
+Content-Security-Policy: frame-ancestors 'none'
+
+Assessment
+
+These are primarily security-hardening recommendations based on the response observed.
+
+I did not demonstrate an actual exploit caused by the missing headers.
+
+Severity: Low / Hardening
+10. localhost:3000 Reference
+
+While examining the returned HTML, I found:
+
+<meta property="og:image"
+content="http://localhost:3000/opengraph-image?...">
+
+I also observed the same development-style URL in Twitter metadata.
+Why this is worth mentioning
+
+localhost:3000 normally refers to a developer's local development server.
+
+Its appearance in production suggests that the production metadata may have been generated using a development configuration.
+
+This does not mean that port 3000 is publicly accessible.
+Possible impact
+
+The main potential impact is:
+
+    Incorrect social-media preview images
+    Broken Open Graph metadata
+    Disclosure of development configuration
+    Configuration-management problems
+
+Recommendation
+
+The production metadata should use the actual production origin instead of:
+
+http://localhost:3000
+
+Severity: Low / Informational
+11. Public Team Member Files
+
+The HTML references several team-member images, including:
+
+/team/aditya-raj.jpeg
+/team/ashwani-raj.jpeg
+/team/harsh-raj-shukla.jpeg
+/team/priyanshu-raushan.jpeg
+/team/akshita-jain.jpeg
+/team/ansh-dixit.jpeg
+/team/adarsh-arya.jpeg
+/team/arpit-panwar.jpeg
+
+These resources are publicly accessible website content.
+Assessment
+
+I do not consider this a vulnerability by itself.
+
+The names and photographs appear to be intended for public display on the website.
+
+However, the website owner should make sure that only intended public files are placed in publicly accessible locations.
+
+Severity: Informational.
+12. Firebase Firestore
+
+During browser inspection, I observed communication with:
+
+firestore.googleapis.com
+
+The request included:
+
+database=projects/gdgrit-b4081/databases/(default)
+
+and:
+
+Origin: https://gdgrit.vercel.app
+
+This indicates that the website communicates directly with Firebase Firestore from the browser.
+Important
+
+The Firebase project identifier being visible in browser traffic is not automatically a vulnerability.
+
+Client-side Firebase applications commonly expose project configuration.
+
+The important security question is whether the Firestore rules correctly restrict access.
+Things that should be checked
+
+The developers should verify that unauthenticated users cannot:
+
+    Read private documents
+    Modify protected documents
+    Delete records
+    Create unauthorized records
+    Access administrative information
+
+No destructive database testing was performed as part of this assessment.
+Assessment
+
+Finding: Firestore access-control configuration should be reviewed.
+
+Severity: Unknown until the security rules are reviewed.
+13. Google Drive Link
+
+The website contains a link/resource pointing to Google Drive.
+
+The existence of a Google Drive link is not itself a security vulnerability.
+
+The important part is the sharing configuration of the linked resource.
+
+The owner should verify whether the Drive resource is:
+
+Restricted
+
+or:
+
+Anyone with the link
+
+and whether the permission is:
+
+Viewer
+Commenter
+Editor
+
+Potential problem
+
+If a sensitive document is configured as:
+
+Anyone with the link → Viewer
+
+then the issue would be unauthorized information disclosure.
+
+If it is:
+
+Anyone with the link → Editor
+
+the risk could be considerably higher because unauthorized users might be able to modify the resource.
+Recommendation
+
+Review the exact Google Drive file/folder linked from the website and make sure its permissions match the intended audience.
+
+Do not place confidential documents, internal credentials, private student information, or other sensitive material in a publicly accessible Drive resource.
+
+Severity: Depends on the actual Drive permissions.
+14. External Links
+
+The website also contains external links such as:
+
+https://ritroorkee.com
+
+and:
+
+https://gdgoc-web-app.vercel.app
+
+along with the GDG community website.
+
+The links I observed are normal external website links.
+
+They should nevertheless be reviewed periodically to ensure that:
+
+    The destination domains are still trusted.
+    No old or abandoned domains are being used.
+    External links opened in new tabs use appropriate rel attributes.
+
+I observed links using:
+
+target="_blank"
+rel="noopener noreferrer"
+
+which is a good practice.
+15. Overall Findings
+#	Finding	Severity	Status
+1	redirect parameter accepts supplied values	Low	Confirmed
+2	Open redirect	—	Not confirmed
+3	XSS using javascript: parameter	—	Not confirmed
+4	Missing CSP header	Low	Observed
+5	Missing X-Content-Type-Options	Low	Observed
+6	Missing X-Frame-Options	Low	Observed
+7	localhost:3000 in production metadata	Low	Confirmed
+8	Public team image paths	Informational	Confirmed
+9	Firebase Firestore client communication	Unknown	Confirmed
+10	Firestore authorization weakness	Unknown	Not tested/confirmed
+11	Google Drive resource	Unknown	Requires permission review
+12	TLS certificate	—	No issue found
+13	HSTS	—	Properly configured
+14	HTTP → HTTPS redirect	—	Working as expected
+16. Recommended Fixes
+1. Review redirect handling
+
+If the redirect parameter is required, only permit trusted destinations.
+
+For example:
+
+/login?redirect=/dashboard
+
+is safer than allowing arbitrary external URLs.
+
+If external redirects are required, maintain an explicit allowlist.
+2. Review client-side use of URL parameters
+
+Search the application source code for:
+
+redirect
+next
+callback
+returnUrl
+destination
+location
+window.open
+innerHTML
+dangerouslySetInnerHTML
+
+Make sure user-controlled values are not inserted into dangerous HTML or JavaScript contexts.
+3. Add security headers
+
+Consider adding:
+
+X-Content-Type-Options: nosniff
+
+and an appropriate CSP.
+
+If the site does not need to be embedded in frames:
+
+Content-Security-Policy: frame-ancestors 'none'
+
+can be used.
+4. Remove development URLs
+
+Replace:
+
+http://localhost:3000
+
+from production metadata with the correct production URL.
+5. Review Firebase rules
+
+Review Firestore security rules and verify that public users only have the minimum access required.
+
+Do not rely on the fact that the Firebase project ID is hidden; it is not a secret.
+6. Review Google Drive permissions
+
+Verify that the linked Drive resource is intentionally public.
+
+If public access is unnecessary, change it to restricted access.
+
+If public access is required, use the lowest required permission, normally Viewer.
+17. Evidence Collected
+
+The main evidence collected during testing includes:
+Nmap
+
+80/tcp  open  http      Vercel
+443/tcp open  ssl/http? Golang net/http server
+
+HTTPS
+
+TLSv1.3
+TLS_AES_128_GCM_SHA256
+X25519MLKEM768
+
+Certificate
+
+CN=*.vercel.app
+subjectAltName: gdgrit.vercel.app
+SSL certificate verified
+
+HSTS
+
+strict-transport-security:
+max-age=63072000; includeSubDomains; preload
+
+Redirect test
+
+GET /?redirect=https://ritroorkee.com
+HTTP/2 200
+
+No external Location: header was returned.
+JavaScript protocol test
+
+GET /?redirect=javascript:alert(1)
+HTTP/2 200
+
+The normal HTML page was returned.
+Development reference
+
+http://localhost:3000/opengraph-image
+
+was present in the HTML metadata.
+Firebase
+
+firestore.googleapis.com
+database=projects/gdgrit-b4081/databases/(default)
+Origin: https://gdgrit.vercel.app
+
+18. Final Conclusion
+
+Based on the testing I performed, the website does not currently have enough evidence to claim a confirmed critical XSS or open-redirect vulnerability.
+
+The main things I would ask the developer to review are the handling of the redirect parameter, the missing security-hardening headers, the localhost:3000 production reference, Firebase Firestore security rules, and the permissions of the Google Drive resource linked from the website.
+
+The HTTPS/TLS configuration and HSTS configuration looked good during testing.
+
+The most important point is that the javascript: request returning `200 OK is not, by itself, proof of XSS. Additional application/source-code testing would be required before classifying it as an actual XSS vulnerability.
+
+Overall, I would classify the current assessment as showing several low-severity hardening/configuration issues and a few areas requiring further security review, rather than a confirmed critical compromise.
+
+Report status: Preliminary security assessment
+Recommended next step: Developer/source-code review and authorized testing of Firestore rules and client-side URL handling.
