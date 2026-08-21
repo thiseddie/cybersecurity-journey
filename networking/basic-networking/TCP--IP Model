@@ -75,3 +75,19 @@ Ethernet (IEEE 802.3): Wired LAN standard.
 Wi-Fi (IEEE 802.11): Wireless LAN standard.
 ARP (Address Resolution Protocol): Maps an IP address to a physical MAC address on a local network.
 Data Unit: Frame (Logical) / Bits (Physical).
+
+
+
+3. TCP/IP vs. OSI Model
+A common interview and documentation requirement is comparing TCP/IP to the theoretical OSI model.
+TCP/IP Model (4 Layers)	OSI Model (7 Layers)	Primary Function
+Application	Application, Presentation, Session	Network applications, data formatting, encryption, session maintenance.
+Transport	Transport	End-to-end connections, reliability, flow control (TCP/UDP).
+Internet	Network	Logical addressing (IP) and routing across multiple networks.
+Network Access	Data Link, Physical	MAC addressing, hardware interaction, physical signal transmission (Bits/Frames).
+4. Key Features of the TCP/IP Model
+Open Standard: It is not owned by any single company. RFCs (Request for Comments) published by the IETF (Internet Engineering Task Force) govern its evolution.
+Hardware and OS Independence: A Windows PC, an Apple iPhone, and a Linux server can all communicate flawlessly because they all speak TCP/IP.
+Scalability: Because of its hierarchical IP addressing scheme and dynamic routing, it scales from a local home network of 5 devices to the global internet of billions.
+Client-Server & Peer-to-Peer: It supports both centralized communication (fetching a webpage from a server) and decentralized networks (direct file sharing).
+Robustness: Designed originally for the military, the Internet layer's dynamic routing means that if one network node goes down, packets can automatically route around the failure.
