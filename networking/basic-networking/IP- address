@@ -2,3 +2,6 @@ what is ip address ?
        An IP address (Internet Protocol address) is a unique numerical label assigned to every device connected to a 
        computer network that uses the Internet Protocol for communication. It acts like a digital mailing address, 
        specifying both where a device is located and how data packets should be routed to reach it.
+Core Functions of an IP Address
+       Host Identification: Identifies a specific device (computer, phone, server, printer) on a network.
+Location Addressing: Provides the logical path or route to reach that device across local networks or the global internet.
