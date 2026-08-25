@@ -4,4 +4,4 @@ what is ip address ?
        specifying both where a device is located and how data packets should be routed to reach it.
 Core Functions of an IP Address
        Host Identification: Identifies a specific device (computer, phone, server, printer) on a network.
-Location Addressing: Provides the logical path or route to reach that device across local networks or the global internet.
+       Location Addressing: Provides the logical path or route to reach that device across local networks or the global internet.
