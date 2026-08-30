@@ -10,5 +10,5 @@ Core Functions of an IP Address
 Key Features of IP Addresses
   1. Address Formats (IPv4 vs. IPv6)
        IPv4 (Internet Protocol Version 4):
-Uses a 32-bit address space represented as four decimal numbers separated by dots (e.g., 192.168.1.1).
-Yields roughly 4.3 billion unique addresses. Because internet-connected devices rapidly depleted this space, a newer format was introduced.
+            Uses a 32-bit address space represented as four decimal numbers separated by dots (e.g., 192.168.1.1).
+            Yields roughly 4.3 billion unique addresses. Because internet-connected devices rapidly depleted this space, a newer format was introduced.
