@@ -12,6 +12,6 @@ Key Features of IP Addresses
        IPv4 (Internet Protocol Version 4):
             Uses a 32-bit address space represented as four decimal numbers separated by dots (e.g., 192.168.1.1).
             Yields roughly 4.3 billion unique addresses. Because internet-connected devices rapidly depleted this space, a newer format was introduced.
-      IPv6 (Internet Protocol Version 6):
+       IPv6 (Internet Protocol Version 6):
            Uses a 128-bit address space represented as eight hexadecimal groups separated by colons (e.g., 2001:0db8:85a3:0000:0000:8a2e:0370:7334).
            Yields over 340 undecillion addresses, ensuring long-term address availability for modern networks and IoT devices.
