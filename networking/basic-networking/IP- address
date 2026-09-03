@@ -10,18 +10,21 @@ Core Functions of an IP Address
 Key Features of IP Addresses
   1. Address Formats (IPv4 vs. IPv6)
        IPv4 (Internet Protocol Version 4):
+
             Uses a 32-bit address space represented as four decimal numbers separated by dots (e.g., 192.168.1.1).
             Yields roughly 4.3 billion unique addresses. Because internet-connected devices rapidly depleted this space, a newer format was introduced.
        IPv6 (Internet Protocol Version 6):
+
            Uses a 128-bit address space represented as eight hexadecimal groups separated by colons (e.g., 2001:0db8:85a3:0000:0000:8a2e:0370:7334).
            Yields over 340 undecillion addresses, ensuring long-term address availability for modern networks and IoT devices.
+
  2. scope (public vs private ip)
        a> public ip addresses:
-        || assigned by an internt server provider (isp) to identify networks publicly on the global internet.
-        || routable globally across the internet
+         || assigned by an internt server provider (isp) to identify networks publicly on the global internet.
+         || routable globally across the internet
 
        b> private ip addresses :
-        || assigned internall by local routers(via dhcp) to identify devices inside a local network (e.g., home or office wi-if).
-        || reserved ranges(e.g., 10.0.0.0/8, 192.168.0.0/16) are non-routable over the internet, keeping local traffic isolated.
+         || assigned internall by local routers(via dhcp) to identify devices inside a local network (e.g., home or office wi-if).
+         || reserved ranges(e.g., 10.0.0.0/8, 192.168.0.0/16) are non-routable over the internet, keeping local traffic isolated.
  
              
