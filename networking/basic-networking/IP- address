@@ -19,6 +19,7 @@ Key Features of IP Addresses
        a> public ip addresses:
        || assigned by an internt server provider (isp) to identify networks publicly on the global internet.
        || routable globally across the internet
+
        b> private ip addresses :
        || assigned internall by local routers(via dhcp) to identify devices inside a local network (e.g., home or office wi-if).
        || reserved ranges(e.g., 10.0.0.0/8, 192.168.0.0/16) are non-routable over the internet, keeping local traffic isolated.
