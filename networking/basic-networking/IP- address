@@ -15,3 +15,9 @@ Key Features of IP Addresses
        IPv6 (Internet Protocol Version 6):
            Uses a 128-bit address space represented as eight hexadecimal groups separated by colons (e.g., 2001:0db8:85a3:0000:0000:8a2e:0370:7334).
            Yields over 340 undecillion addresses, ensuring long-term address availability for modern networks and IoT devices.
+ 2. scope (public vs private ip)
+       a> public ip addresses:
+            assigned by an internt server provider (isp) to identify networks publicly on the global internet.
+
+       b> private ip addresses :
+             
