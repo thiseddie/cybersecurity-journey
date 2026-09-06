@@ -28,10 +28,10 @@ Key Features of IP Addresses
          || reserved ranges(e.g., 10.0.0.0/8, 192.168.0.0/16) are non-routable over the internet, keeping local traffic isolated.
  
    3. Allocation Assignment (Static vs. Dynamic IPs)
-Static IP Addresses:
-Manually configured and permanent addresses that do not change over time.
-Primarily used for web servers, VPN endpoints, local printers, or corporate infrastructure. 
+           Static IP Addresses:
+                         Manually configured and permanent addresses that do not change over time.
+                         Primarily used for web servers, VPN endpoints, local printers, or corporate infrastructure. 
 
-Dynamic IP Addresses:
-Automatically assigned and leased temporarily by DHCP servers.
-Standard for most consumer devices; the address may refresh periodically or when reconnecting to the network.
+           Dynamic IP Addresses:
+                         Automatically assigned and leased temporarily by DHCP servers.
+                         Standard for most consumer devices; the address may refresh periodically or when reconnecting to the network.
