@@ -27,4 +27,7 @@ Key Features of IP Addresses
          || assigned internall by local routers(via dhcp) to identify devices inside a local network (e.g., home or office wi-if).
          || reserved ranges(e.g., 10.0.0.0/8, 192.168.0.0/16) are non-routable over the internet, keeping local traffic isolated.
  
-             
+   3. Allocation Assignment (Static vs. Dynamic IPs)
+Static IP Addresses:
+Manually configured and permanent addresses that do not change over time.
+Primarily used for web servers, VPN endpoints, local printers, or corporate infrastructure.          
