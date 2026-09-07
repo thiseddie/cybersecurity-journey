@@ -36,3 +36,5 @@ Key Features of IP Addresses
                          Automatically assigned and leased temporarily by DHCP servers.
                          Standard for most consumer devices; the address may refresh periodically or when reconnecting to the network.
    4. Network Architecture Features
+                          Two-Part Structure (Network vs. Host): An IP address consists of two parts: the Network ID (which identifies the specific subnetwork) and 
+                          the Host ID (which identifies the individual device on that subnetwork).
