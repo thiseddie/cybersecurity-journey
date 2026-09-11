@@ -7,3 +7,6 @@
 # Anatomy & Structure
                A standard MAC-48 address consists of 48 bits (6 bytes or 6 octets) and is represented
                in hexadecimal format.
+
+               Format Examples: 00:1A:2B:3C:4D:5E (colon-delimited), 00-1A-2B-3C-4D-5E (hyphen-delimited),
+               or 001A.2B3C.4D5E (dot-delimited).
