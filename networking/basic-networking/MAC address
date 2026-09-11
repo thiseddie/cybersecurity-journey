@@ -5,3 +5,5 @@
                data locally to the correct device.
 
 # Anatomy & Structure
+               A standard MAC-48 address consists of 48 bits (6 bytes or 6 octets) and is represented
+               in hexadecimal format.
