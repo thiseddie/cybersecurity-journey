@@ -11,8 +11,8 @@
                Format Examples: 00:1A:2B:3C:4D:5E (colon-delimited), 00-1A-2B-3C-4D-5E (hyphen-delimited),
                or 001A.2B3C.4D5E (dot-delimited).
 Structure & Format
-A MAC address is a 48-bit (6-byte) binary number expressed as 12 hexadecimal characters, usually formatted in one of three ways:
-00:1A:2B:3C:4D:5E (Colon-delimited — most common)
-00-1A-2B-3C-4D-5E (Hyphen-delimited)
-001A.2B3C.4D5E (Dot-delimited — common in Cisco routers)
-The 48 bits are divided into two equal halves:
+              A MAC address is a 48-bit (6-byte) binary number expressed as 12 hexadecimal characters, usually formatted in one of three ways:
+              00:1A:2B:3C:4D:5E (Colon-delimited — most common)
+              00-1A-2B-3C-4D-5E (Hyphen-delimited)
+             001A.2B3C.4D5E (Dot-delimited — common in Cisco routers)
+             The 48 bits are divided into two equal halves:
