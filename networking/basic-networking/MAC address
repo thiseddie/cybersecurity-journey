@@ -20,3 +20,12 @@ Structure & Format
 Field	                                        Size	                   Function
 OUI (Organizationally Unique Identifier)	  First 24 bits (3 bytes)   	Identifies the hardware vendor (e.g., Apple, Intel, Cisco) assigned by the IEEE.
 UAA (Universally Administered Address)    	Last 24 bits (3 bytes)	    Unique serial number assigned by the manufacturer to that specific card.
+
+
+How MAC Addresses Function in Networking
+Data Link Layer (Layer 2) Delivery:
+Operating at Layer 2 of the OSI model, MAC addresses manage frame delivery directly between local network devices (switches, routers, PCs) connected via Ethernet or Wi-Fi.
+IP-to-MAC Resolution (ARP & NDP):
+Routers use ARP (Address Resolution Protocol) in IPv4 or NDP (Neighbor Discovery Protocol) in IPv6 to map a dynamic IP address to a physical MAC address on the local area network (LAN).
+Switch Forwarding:
+Network switches build a MAC Address Table to learn which device connects to which physical port, ensuring data frames go directly to the target device rather than broadcasting to every port.
