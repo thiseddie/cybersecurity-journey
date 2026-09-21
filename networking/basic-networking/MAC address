@@ -17,7 +17,6 @@ Structure & Format
               001A.2B3C.4D5E (Dot-delimited — common in Cisco routers)
               The 48 bits are divided into two equal halves:
 
-Field,Size,Function
-OUI (Organizationally Unique Identifier)
-,First 24 bits (3 bytes),"Identifies the hardware vendor (e.g., Apple, Intel, Cisco) assigned by the IEEE."
-UAA (Universally Administered Address),Last 24 bits (3 bytes),Unique serial number assigned by the manufacturer to that specific card.
+Field	                                        Size	                   Function
+OUI (Organizationally Unique Identifier)	  First 24 bits (3 bytes)   	Identifies the hardware vendor (e.g., Apple, Intel, Cisco) assigned by the IEEE.
+UAA (Universally Administered Address)    	Last 24 bits (3 bytes)	    Unique serial number assigned by the manufacturer to that specific card.
