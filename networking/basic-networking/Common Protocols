@@ -1,1 +1,6 @@
-
+1. HTTP (Hypertext Transfer Protocol) — Port 80
+What it is: The basic language used to transfer web pages over the internet.
+How it works: When you type [http://example.com](http://example.com) into a browser, your computer asks
+the web server over Port 80 to send back the HTML, images, and text that make up the webpage.
+Catch: It transmits data in plain text. Anyone eavesdropping on your Wi-Fi network can read what you send 
+(like passwords or credit cards).
