@@ -4,3 +4,10 @@ How it works: When you type [http://example.com](http://example.com) into a brow
 the web server over Port 80 to send back the HTML, images, and text that make up the webpage.
 Catch: It transmits data in plain text. Anyone eavesdropping on your Wi-Fi network can read what you send 
 (like passwords or credit cards).
+
+2. HTTPS (HTTP Secure) — Port 443
+What it is: The encrypted, secure version of HTTP.
+How it works: It uses encryption (via TLS/SSL) on Port 443 so that all data sent between your browser and
+the website is scrambled.
+Real-world analogy: HTTP is like sending a postcard where the mail carrier can read your message. HTTPS is
+like locking your message inside an unbreakable safe before mailing it.
