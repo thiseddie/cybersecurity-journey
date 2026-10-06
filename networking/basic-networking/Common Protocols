@@ -16,3 +16,9 @@ like locking your message inside an unbreakable safe before mailing it.
 What it is: A dedicated method for uploading and downloading files between a client and a server.
 How it works: Port 21 is used to establish the connection and send commands (like "list files" or "download image.jpg").
 When it's used: Web developers historically used FTP to upload website files to web hosting servers.
+
+4. SSH (Secure Shell) — Port 22
+What it is: A secure, encrypted way to remotely log into and control another computer or server via a text terminal.
+How it works: Admins connect over Port 22 to type command-line commands on a remote server thousands of miles away as if
+they were sitting right in front of it.
+Why it matters: It completely replaced older, unencrypted tools (like Telnet) because everything sent over SSH is fully encrypted.
