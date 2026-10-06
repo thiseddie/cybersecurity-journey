@@ -11,3 +11,8 @@ How it works: It uses encryption (via TLS/SSL) on Port 443 so that all data sent
 the website is scrambled.
 Real-world analogy: HTTP is like sending a postcard where the mail carrier can read your message. HTTPS is
 like locking your message inside an unbreakable safe before mailing it.
+
+3. FTP (File Transfer Protocol) — Port 21
+What it is: A dedicated method for uploading and downloading files between a client and a server.
+How it works: Port 21 is used to establish the connection and send commands (like "list files" or "download image.jpg").
+When it's used: Web developers historically used FTP to upload website files to web hosting servers.
