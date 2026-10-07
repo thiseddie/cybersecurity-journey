@@ -22,3 +22,8 @@ What it is: A secure, encrypted way to remotely log into and control another com
 How it works: Admins connect over Port 22 to type command-line commands on a remote server thousands of miles away as if
 they were sitting right in front of it.
 Why it matters: It completely replaced older, unencrypted tools (like Telnet) because everything sent over SSH is fully encrypted.
+
+5. DNS (Domain Name System) — Port 53
+What it is: The "phonebook" of the Internet.
+How it works: Computers don't understand names like google.com; they only understand IP addresses like 142.250.190.46. When you type 
+a web address, your device queries a DNS server on Port 53 to translate the human-friendly name into the machine-friendly IP address.
