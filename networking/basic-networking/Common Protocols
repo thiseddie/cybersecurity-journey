@@ -35,3 +35,12 @@ When your phone connects to Wi-Fi, it asks on Port 68: "Hey, can someone give me
 The router responds from Port 67: "Here is IP address 192.168.1.15, valid for 24 hours."
 Why it matters: Without DHCP, you would have to manually type in IP addresses, subnet masks, and gateways every time you connected 
 to a new Wi-Fi network.
+
+
+7. SMTP (Simple Mail Transfer Protocol) — Port 25 (and 465/587 for Submission)
+Purpose: Email Sending
+Basic Concept: SMTP is the standard protocol used to transmit outgoing emails across the internet from an email client to a mail server, or between mail servers.
+Advanced Concepts:
+Mail Agents: Involves Mail User Agents (MUA, e.g., Outlook/Thunderbird) talking to Mail Transfer Agents (MTA, e.g., Postfix, Sendmail).
+Ports in Practice: While Port 25 is standard for server-to-server MTA relaying, client submission uses Port 587 (STARTTLS) or Port 465 (SMTPS / Implicit TLS) to prevent ISP spam blocking.
+Email Authentication Standards: To prevent spoofing and spam, SMTP relies on external DNS records: SPF (Sender Policy Framework), DKIM (DomainKeys Identified Mail), and DMARC (Domain-based Message Authentication, Reporting, and Conformance).
